@@ -30,8 +30,7 @@ export const FinalCtaSection: React.FC = () => {
             viewport={{ once: true, margin: "-80px" }}
             custom={1}
           >
-            Se você chegou até aqui, por favor, já sabe que precisa
-            <em>cuidar disso.</em>
+            Se você chegou até aqui, por favor, já sabe que precisa <em>cuidar disso.</em>
           </motion.h2>
 
           <div className={styles.bodyText}>
