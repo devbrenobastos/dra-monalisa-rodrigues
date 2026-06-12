@@ -254,11 +254,11 @@
     align-items: center;
   }
 
-  /* H1: fonte maior para caber em 2–3 linhas confortáveis */
+  /* H1: tamanho menor para caber em 2–3 linhas confortáveis */
   .headline {
-    font-size: clamp(2.25rem, 8.5vw, 3rem);
-    line-height: 1.1;
-    letter-spacing: -0.025em;
+    font-size: clamp(1.625rem, 6.5vw, 2.25rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
     text-align: center;
   }
 
