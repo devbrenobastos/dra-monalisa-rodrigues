@@ -1,6 +1,12 @@
 .section {
   background-color: var(--bg-surface);
-  padding: 80px 0;
+  padding: 96px 0;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 64px 0;
+  }
 }
 
 .container {
@@ -27,9 +33,10 @@
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  font-weight: 400;
-  line-height: 1.1;
+  font-size: var(--text-xl);         /* 30px — ERA MAIOR, agora reduz */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);  /* 1.2 */
+  letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
 }
 
@@ -50,66 +57,87 @@
   background: var(--bg-base);
   border: 1px solid var(--mist);
   border-radius: var(--radius-lg);
-  padding: 24px 24px 20px;
+  padding: 28px 24px;
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
-.quoteMark {
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--rose-cta);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--rose-wash);
+  color: var(--rose-cta);
   font-family: var(--font-display);
-  font-size: 72px;
-  color: var(--rose);
-  opacity: 0.15;
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  line-height: 0.8;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 500;
 }
 
-.content {
-  position: relative;
-  z-index: 2;
+.metaInfo {
   display: flex;
   flex-direction: column;
-  height: 100%;
-}
-
-.stars {
-  color: var(--rose-cta);
-  font-size: 0.75rem;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
-}
-
-.text {
-  font-family: var(--font-body);
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--text-primary);
-  margin-bottom: 24px;
-  flex-grow: 1;
+  gap: 2px;
 }
 
 .authorInfo {
   display: flex;
-  flex-direction: column;
-  border-top: 1px solid var(--mist);
-  padding-top: 16px;
-  margin-top: 16px;
+  align-items: baseline;
+  gap: 6px;
 }
 
 .name {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;  /* 14px */
   font-weight: 600;
   color: var(--text-primary);
 }
 
 .city {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: 0.8125rem; /* 13px */
   color: var(--text-secondary);
+}
+
+.stars {
+  color: var(--rose-cta);
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+
+.quoteFeatured {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.45;
+  color: var(--text-primary);
+  margin: 16px 0 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--mist);
+}
+
+.quoteFull {
+  font-family: var(--font-body);
+  font-size: 0.9375rem; /* 15px */
+  color: var(--text-secondary);
+  line-height: 1.65;
 }
 
 /* Media Queries */

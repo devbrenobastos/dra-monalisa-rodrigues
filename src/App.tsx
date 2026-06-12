@@ -6,6 +6,7 @@ import { CredentialsBar } from './components/CredentialsBar/CredentialsBar';
 import { ProblemSection } from './components/ProblemSection/ProblemSection';
 import { TreatmentsSection } from './components/TreatmentsSection/TreatmentsSection';
 import { AboutSection } from './components/AboutSection/AboutSection';
+import { SocialProofSection } from './components/SocialProofSection/SocialProofSection';
 import { HowItWorksSection } from './components/HowItWorksSection/HowItWorksSection';
 import { TestimonialsSection } from './components/TestimonialsSection/TestimonialsSection';
 import { FaqSection } from './components/FaqSection/FaqSection';
@@ -20,9 +21,10 @@ const App: React.FC = () => {
       <main>
         <Hero />
         <CredentialsBar />
+        <AboutSection />
+        <SocialProofSection />
         <ProblemSection />
         <TreatmentsSection />
-        <AboutSection />
         <HowItWorksSection />
         <TestimonialsSection />
         <FaqSection />

@@ -30,8 +30,8 @@ export const FinalCtaSection: React.FC = () => {
             viewport={{ once: true, margin: "-80px" }}
             custom={1}
           >
-            O primeiro passo é o mais&nbsp;difícil.<br />
-            <em>A gente sabe disso.</em>
+            Se você chegou até aqui, por favor, já sabe que precisa
+            <em>cuidar disso.</em>
           </motion.h2>
 
           <div className={styles.bodyText}>
@@ -42,8 +42,8 @@ export const FinalCtaSection: React.FC = () => {
               viewport={{ once: true, margin: "-80px" }}
               custom={2}
             >
-              Ligar para um dentista depois de anos evitando não é simples.
-              Mas você está aqui, e isso já diz muito.
+              A única pergunta é: vai resolver agora ou continuar
+              convivendo com esse problema por mais alguns meses?
             </motion.p>
             <motion.p
               variants={fadeUp}
@@ -52,9 +52,8 @@ export const FinalCtaSection: React.FC = () => {
               viewport={{ once: true, margin: "-80px" }}
               custom={3}
             >
-              Nossa avaliação é gratuita, sem compromisso e sem julgamento.
-              Você conta o que está sentindo, a gente explica o que pode ser feito.
-              O que acontece depois é decisão sua.
+              Nossa avaliação é gratuita. Sem compromisso. Sem pressão.
+              Só uma conversa para entender o seu caso.
             </motion.p>
           </div>
 

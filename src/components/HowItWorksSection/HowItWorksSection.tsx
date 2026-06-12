@@ -2,99 +2,126 @@ import React from 'react';
 import styles from './HowItWorksSection.module.css';
 import { motion } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
-import { fadeUp } from '../../animations/variants';
+
+function AnimatedArrow() {
+  return (
+    <div className={styles.arrowWrapper}>
+      <motion.div
+        className={styles.arrowTrack}
+        animate={{ x: [0, 7, 0] }}
+        transition={{
+          duration: 1.6,
+          repeat: Infinity,
+          ease: [0.45, 0, 0.55, 1],  /* ease-in-out suave */
+          repeatType: 'loop',
+        }}
+      >
+        <svg
+          width="28"
+          height="16"
+          viewBox="0 0 28 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className={styles.arrowSvg}
+        >
+          {/* Linha da seta */}
+          <line
+            x1="0" y1="8" x2="20" y2="8"
+            stroke="var(--rose)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+          />
+          {/* Ponta da seta */}
+          <polyline
+            points="13,2 20,8 13,14"
+            stroke="var(--rose)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            fill="none"
+          />
+          {/* Segundo traço paralelo — detalhe editorial */}
+          <line
+            x1="0" y1="8" x2="6" y2="8"
+            stroke="var(--rose-cta)"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            opacity="0.4"
+          />
+        </svg>
+      </motion.div>
+    </div>
+  );
+}
 
 export const HowItWorksSection: React.FC = () => {
   const steps = [
     {
-      num: '01',
-      title: 'Avaliação gratuita',
-      desc: 'Você conta o que está sentindo. A gente escuta, examina e explica sem julgamento e sem pressa. Você sai sabendo exatamente o que fazer.'
+      number: '01',
+      title: 'Agende sua avaliação gratuita',
+      text: 'Você conta o que está sentindo. A gente escuta, examina e explica tudo, sem julgamento e sem pressa.',
     },
     {
-      num: '02',
-      title: 'Planejamento no seu ritmo',
-      desc: 'Cronograma, custo real, opções de parcelamento. Nada começa antes de você entender e concordar.'
+      number: '02',
+      title: 'Entenda exatamente o que está acontecendo',
+      text: 'Cronograma, custo real e opções de parcelamento. Nada começa antes de você entender e concordar.',
     },
     {
-      num: '03',
-      title: 'Tratamento com quem você já conhece',
-      desc: 'Do início ao fim, os mesmos profissionais. Sem surpresas.'
-    }
+      number: '03',
+      title: 'Receba o tratamento ideal para você',
+      text: 'Do início ao fim, os mesmos profissionais. Sem surpresas. Com o cuidado que você merece.',
+    },
   ];
-
-  const staggerContainer = {
-    hidden: {},
-    visible: {
-      transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.1
-      }
-    }
-  };
 
   return (
     <section className={styles.section}>
-      <div className={styles.container}>
+      <div className={styles.inner}>
+
+        {/* Cabeçalho */}
         <div className={styles.header}>
-          <motion.div
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
-            <SectionLabel>Como funciona</SectionLabel>
-          </motion.div>
-          <motion.h2 
-            className={styles.title}
-            variants={fadeUp}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ delay: 0.1 }}
-          >
+          <SectionLabel>Como funciona</SectionLabel>
+          <h2 className={styles.sectionTitle}>
             Três passos. <em>Sem complicação.</em>
-          </motion.h2>
+          </h2>
         </div>
 
-        <div className={styles.stepsWrapper}>
-          {/* Connector Line SVG for Desktop */}
-          <motion.div 
-            className={styles.connectorLineDesktop}
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-            style={{ transformOrigin: "left" }}
-          >
-            <svg width="100%" height="2" viewBox="0 0 800 2" fill="none" preserveAspectRatio="none">
-              <line x1="0" y1="1" x2="800" y2="1" stroke="var(--mist)" strokeWidth="2" strokeDasharray="6 6" />
-            </svg>
-          </motion.div>
-
-          <motion.div 
-            className={styles.stepsGrid}
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
-            {steps.map((step, idx) => (
-              <motion.div 
-                key={idx} 
-                className={styles.stepCard}
-                variants={fadeUp}
-                custom={idx}
+        {/* Grid steps + setas */}
+        <div className={styles.stepsRow}>
+          {steps.map((step, i) => (
+            <React.Fragment key={step.number}>
+              {/* Card */}
+              <motion.div
+                className={styles.card}
+                initial={{ opacity: 0, y: 28 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{
+                  duration: 0.55,
+                  ease: [0.22, 1, 0.36, 1],
+                  delay: i * 0.15,
+                }}
               >
-                <div className={styles.numberCircle}>
-                  {step.num}
-                </div>
-                <h3 className={styles.stepTitle}>{step.title}</h3>
-                <p className={styles.stepDesc}>{step.desc}</p>
+                {/* Watermark de fundo */}
+                <span className={styles.cardNumber} aria-hidden="true">
+                  {step.number}
+                </span>
+
+                {/* Label do step */}
+                <span className={styles.stepLabel}>Passo {step.number}</span>
+
+                {/* Título */}
+                <h3 className={styles.cardTitle}>{step.title}</h3>
+
+                {/* Texto */}
+                <p className={styles.cardText}>{step.text}</p>
               </motion.div>
-            ))}
-          </motion.div>
+
+              {/* Seta entre cards (não após o último) */}
+              {i < steps.length - 1 && <AnimatedArrow key={`arrow-${i}`} />}
+            </React.Fragment>
+          ))}
         </div>
+
       </div>
     </section>
   );

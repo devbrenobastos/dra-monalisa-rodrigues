@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              Você pode voltar a sorrir,
+              Talvez você tenha adiado
             </motion.span>
             <motion.span
               style={{ display: 'block' }}
@@ -41,7 +41,16 @@ export const Hero: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              sem medo, sem dor e sem enrolação.
+              essa consulta por meses.
+            </motion.span>
+            <motion.span
+              style={{ display: 'block' }}
+              custom={2.5}
+              variants={fadeUp}
+              initial="hidden"
+              animate="visible"
+            >
+              Ou até por <em>anos.</em>
             </motion.span>
           </h1>
 
@@ -52,9 +61,10 @@ export const Hero: React.FC = () => {
             initial="hidden"
             animate="visible"
           >
-            Especialistas em implante dentário e tratamento de canal.
-            Mais de 2.000 casos com atendimento que respeita
-            o seu tempo e a sua história.
+            Tudo bem. O importante é que você chegou até aqui.<br /><br />
+            Mais de 2.000 pacientes já passaram pelo mesmo medo
+            e descobriram que o tratamento era muito mais tranquilo
+            do que imaginavam.
           </motion.p>
 
           <motion.div 

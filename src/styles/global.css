@@ -20,6 +20,38 @@
   --font-display: 'Fraunces', Georgia, serif;
   --font-body: 'Hanken Grotesk', system-ui, sans-serif;
 
+  /* ============================================
+     ESCALA TIPOGRÁFICA — RATIO 1.25 (Major Third)
+     Base: 17px
+     ============================================ */
+  --text-xs:   0.75rem;    /* 12px — eyebrows, micro-copy */
+  --text-sm:   0.875rem;   /* 14px — legendas, rodapé, autor de depoimento */
+  --text-base: 1.0625rem;  /* 17px — body principal (BASE) */
+  --text-md:   1.25rem;    /* 20px — body destaque, subheadline */
+  --text-lg:   1.5rem;     /* 24px — H3, títulos de card */
+  --text-xl:   1.875rem;   /* 30px — H2 seções internas */
+  --text-2xl:  2.25rem;    /* 36px — H2 hero e seções âncora */
+  --text-3xl:  2.75rem;    /* 44px — H1 mobile */
+  --text-4xl:  clamp(2.75rem, 4.5vw, 3.5rem); /* 44–56px — H1 desktop */
+
+  /* Pesos */
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-semibold: 600;
+
+  /* Line-heights */
+  --leading-tight:   1.05;  /* display headlines */
+  --leading-snug:    1.2;   /* H2, H3 */
+  --leading-normal:  1.5;   /* subtítulos */
+  --leading-relaxed: 1.7;   /* body principal */
+  --leading-loose:   1.8;   /* body em seções escuras */
+
+  /* Letter-spacing */
+  --tracking-tight:  -0.02em; /* headlines grandes */
+  --tracking-normal:  0;
+  --tracking-wide:    0.08em;  /* eyebrows */
+  --tracking-wider:   0.12em;  /* labels uppercase */
+
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -27,6 +59,7 @@
 
   --shadow-soft: 0 4px 24px rgba(42, 36, 38, 0.06);
   --shadow-card: 0 2px 16px rgba(42, 36, 38, 0.05);
+  --shadow-sm: 0 2px 8px rgba(42, 36, 38, 0.04);
 }
 
 /* Reset and base styling */
@@ -38,6 +71,21 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;   /* mobile */
+}
+
+@media (min-width: 768px) {
+  .container { padding: 0 40px; }
+}
+
+@media (min-width: 1024px) {
+  .container { padding: 0 64px; }
 }
 
 ::selection {
@@ -56,9 +104,14 @@ body {
   background-color: var(--bg-base);
   color: var(--text-primary);
   min-height: 100vh;
-  line-height: 1.7;
-  font-size: 1.125rem; /* 18px - Never below 17px */
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-base); /* 17px - Never below 17px */
   -webkit-font-smoothing: antialiased;
+}
+
+.section-inner {
+  max-width: 680px;
+  margin: 0 auto;
 }
 
 h1, h2, h3, h4 {

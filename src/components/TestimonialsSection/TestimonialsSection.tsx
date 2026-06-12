@@ -7,19 +7,22 @@ import { scaleIn, fadeUp, staggerContainer } from '../../animations/variants';
 export const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
+      featured: "Passei três anos adiando por medo. Não senti absolutamente nada.",
       quote: "Eu adiava o canal há três anos por pavor. A Dra. me atendeu com tanta calma que quase dormi na cadeira. Fiz o tratamento sem sentir nada. Só me arrependo de ter esperado tanto.",
       author: "Juliana Santos",
       city: "Vinhedo",
       stars: "★★★★★"
     },
     {
-      quote: "Perdi um dente há dois anos e me sentia mais velho do que sou. Achava que implante era coisa de rico. Em poucos meses, com parcelas que caberam no meu orçamento, recuperei meu sorriso.",
+      featured: "Recuperei meu sorriso e minha autoestima com parcelas que cabem no bolso.",
+      quote: "Perdi um dente há dois anos e me sentia mais velho do que sou. Achava que implante era coisa de rico. Em poucos meses, com parcelas que couberam no meu orçamento, recuperei meu sorriso.",
       author: "Carlos Alberto",
       city: "Campinas",
       stars: "★★★★★"
     },
     {
-      quote: "Uso Uniodonto e tinha medo de ser tratado como paciente de segunda. Fui surpreendido: o atendimento foi exatamente igual ao particular. Profissionais atenciosos, ambiente impecável.",
+      featured: "O atendimento pelo convênio foi impecável, exatamente igual ao particular.",
+      quote: "Uso Uniodonto e tinha medo de ser tratado como paciente de segunda. Fui surpreendida, o atendimento foi exatamente igual ao particular. Profissionais atenciosos e ambiente impecável.",
       author: "Mariana Costa",
       city: "Vinhedo",
       stars: "★★★★★"
@@ -63,17 +66,26 @@ export const TestimonialsSection: React.FC = () => {
               className={styles.card}
               variants={scaleIn}
             >
-              {/* Floating large quote sign */}
-              <span className={styles.quoteMark}>“</span>
-              
-              <div className={styles.content}>
-                <div className={styles.stars}>{item.stars}</div>
-                <p className={styles.text}>{item.quote}</p>
-                <div className={styles.authorInfo}>
-                  <span className={styles.name}>{item.author}</span>
-                  <span className={styles.city}>{item.city}</span>
+              <div className={styles.cardHeader}>
+                <div className={styles.avatar}>
+                  {item.author.charAt(0)}
+                </div>
+                <div className={styles.metaInfo}>
+                  <div className={styles.authorInfo}>
+                    <span className={styles.name}>{item.author}</span>
+                    <span className={styles.city}>{item.city}</span>
+                  </div>
+                  <div className={styles.stars}>{item.stars}</div>
                 </div>
               </div>
+              
+              <div className={styles.quoteFeatured}>
+                "{item.featured}"
+              </div>
+              
+              <p className={styles.quoteFull}>
+                {item.quote}
+              </p>
             </motion.div>
           ))}
         </motion.div>

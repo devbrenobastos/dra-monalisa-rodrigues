@@ -16,7 +16,7 @@ interface FaqItemProps {
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle, index }) => {
   return (
     <motion.div 
-      className={styles.item}
+      className={styles.faqItem}
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
@@ -24,7 +24,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle, i
       custom={index * 0.05}
     >
       <button 
-        className={styles.questionBtn} 
+        className={styles.faqTrigger} 
         onClick={onToggle}
         aria-expanded={isOpen}
       >
@@ -37,7 +37,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle, i
           <Plus size={18} />
         </motion.span>
       </button>
-
+ 
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
@@ -47,7 +47,7 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle, i
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
             className={styles.answerWrapper}
           >
-            <div className={styles.answerText}>
+            <div className={styles.faqContent}>
               {answer}
             </div>
           </motion.div>

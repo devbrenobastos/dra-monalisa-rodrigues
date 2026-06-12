@@ -1,6 +1,12 @@
 .section {
   background-color: var(--bg-base);
-  padding: 80px 0;
+  padding: 96px 0;
+}
+
+@media (max-width: 767px) {
+  .section {
+    padding: 64px 0;
+  }
 }
 
 .container {
@@ -27,9 +33,10 @@
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 3.5vw, 2.75rem);
-  font-weight: 400;
-  line-height: 1.1;
+  font-size: var(--text-xl);         /* 30px — ERA MAIOR, agora reduz */
+  font-weight: var(--weight-regular);
+  line-height: var(--leading-snug);  /* 1.2 */
+  letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
 }
 
@@ -47,14 +54,23 @@
   flex-direction: column;
 }
 
-.item {
-  border-bottom: 1px solid var(--mist);
-  padding: 18px 0;
+.faqItem {
+  border: 1px solid var(--mist); /* borda full, não só bottom */
+  border-radius: var(--radius-md);
+  margin-bottom: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--bg-surface);
 }
 
-.questionBtn {
+.faqItem:hover {
+  border-color: var(--rose);
+  box-shadow: var(--shadow-sm);
+}
+
+.faqTrigger {
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: var(--text-base); /* 17px */
   font-weight: 500;
   color: var(--text-primary);
   text-align: left;
@@ -65,9 +81,15 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 8px 0;
+  padding: 20px 24px; /* era pequeno */
   gap: 16px;
   min-height: 48px;
+  transition: color 0.2s ease;
+  line-height: 1.4;
+}
+
+.faqTrigger:hover {
+  color: var(--rose-cta);
 }
 
 .iconWrapper {
@@ -82,10 +104,10 @@
   overflow: hidden;
 }
 
-.answerText {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  line-height: 1.6;
+.faqContent {
+  padding: 12px 24px 20px;
+  font-size: 0.9375rem; /* 15px */
   color: var(--text-secondary);
-  padding: 8px 0 8px 0;
+  line-height: 1.7;
+  font-family: var(--font-body);
 }
