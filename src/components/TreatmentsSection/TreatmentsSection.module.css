@@ -117,44 +117,47 @@
 
 .canalTagDor {
   color: var(--rose-cta);
-  animation: tagDorCycle 5s ease-in-out infinite;
+  animation: tagDorCycle 8s ease-in-out infinite;
 }
 
 .canalTagAlivio {
   color: var(--sage);
-  animation: tagAlivioCycle 5s ease-in-out infinite;
+  animation: tagAlivioCycle 8s ease-in-out infinite;
 }
 
 .canalTagSemPerder {
   color: var(--text-secondary);
-  animation: tagSemPerderCycle 5s ease-in-out infinite;
+  animation: tagSemPerderCycle 8s ease-in-out infinite;
 }
 
-/* Ciclo de 5s dividido em 3 janelas com gap de ~0.4s entre cada uma */
-/* Text 1: 0–1.8s visível  |  gap até 2.2s  */
-/* Text 2: 2.2–3.65s       |  gap até 4.0s  */
-/* Text 3: 4.0–4.85s       |  fade até 5s   */
-
+/*
+  Ciclo de 8s — cada texto visível ~1.3s, gaps de ~0.5s entre todos,
+  incluindo o ponto de loop (text 3 → text 1).
+  Text 1:  0.5s gap | fade 0.5s | 1.3s | fade 0.5s
+  Text 2:  0.5s gap | fade 0.5s | 1.3s | fade 0.5s
+  Text 3:  0.5s gap | fade 0.5s | 1.3s | fade 0.5s → loop gap (volta ao 0%)
+*/
 @keyframes tagDorCycle {
-  0%, 5%  { opacity: 0.65; }
+  0%, 6%  { opacity: 0; }   /* gap de loop antes de entrar */
+  12%     { opacity: 0.65; }
   28%     { opacity: 0.65; }
-  36%     { opacity: 0; }
+  34%     { opacity: 0; }
   100%    { opacity: 0; }
 }
 
 @keyframes tagAlivioCycle {
-  0%, 44%  { opacity: 0; }
-  52%      { opacity: 0.75; }
-  65%      { opacity: 0.75; }
-  73%      { opacity: 0; }
+  0%, 40%  { opacity: 0; }
+  46%      { opacity: 0.75; }
+  62%      { opacity: 0.75; }
+  68%      { opacity: 0; }
   100%     { opacity: 0; }
 }
 
 @keyframes tagSemPerderCycle {
-  0%, 80%  { opacity: 0; }
-  88%      { opacity: 0.7; }
-  97%      { opacity: 0.7; }
-  100%     { opacity: 0; }
+  0%, 74%  { opacity: 0; }
+  80%      { opacity: 0.7; }
+  96%      { opacity: 0.7; }
+  100%     { opacity: 0; }   /* funde no gap do próximo loop */
 }
 
 .imageBadge {
