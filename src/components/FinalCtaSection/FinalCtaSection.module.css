@@ -137,3 +137,49 @@
 .phoneLabel:hover {
   color: var(--rose);
 }
+
+@media (max-width: 767px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: clamp(1.625rem, 6vw, 2rem);
+    margin-bottom: 16px;
+  }
+
+  .bodyText p {
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    max-width: 100%;
+  }
+
+  .ctaWrapper {
+    margin-top: 28px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: none;
+    padding: 18px 24px;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .microCopy {
+    font-size: 0.75rem;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 14px;
+    text-align: center;
+  }
+}

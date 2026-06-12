@@ -61,7 +61,10 @@ export const Hero: React.FC = () => {
             initial="hidden"
             animate="visible"
           >
-            Tudo bem. O importante é que você chegou até aqui.<br /><br />
+            <strong className={styles.subheroStrong}>
+              Tudo bem.<br />O importante é que você chegou até aqui.
+            </strong>
+            <br /><br />
             Mais de 2.000 pacientes já passaram pelo mesmo medo
             e descobriram que o tratamento era muito mais tranquilo
             do que imaginavam.

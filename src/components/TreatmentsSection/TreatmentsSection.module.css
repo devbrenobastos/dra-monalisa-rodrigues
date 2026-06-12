@@ -279,3 +279,64 @@
     gap: 24px;
   }
 }
+
+@media (max-width: 767px) {
+  .section {
+    padding: 64px 0;
+  }
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .imageBadge {
+    font-size: 11px;
+    padding: 6px 12px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .cardImageWrapper {
+    overflow: hidden;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .animTag,
+  .canalTagWrap {
+    padding: 6px 0;
+  }
+
+  .content {
+    padding: 20px 20px 18px;
+  }
+
+  .cardTitle {
+    font-size: 1.25rem;
+    line-height: 1.25;
+  }
+
+  .cardDescription {
+    font-size: 0.9375rem;
+  }
+
+  .outcomesList {
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+
+  .outcomesList li {
+    font-size: 0.875rem;
+  }
+
+  .cardCta {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 0.9375rem;
+  }
+}

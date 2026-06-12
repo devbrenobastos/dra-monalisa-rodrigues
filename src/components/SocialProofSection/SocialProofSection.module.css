@@ -186,3 +186,49 @@
   font-weight: 600;
   opacity: 1;
 }
+
+@media (max-width: 767px) {
+  .section {
+    padding: 72px 0;
+  }
+
+  .inner {
+    padding: 0 20px;
+  }
+
+  .headline {
+    font-size: clamp(1.625rem, 6vw, 2rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+  }
+
+  .sub {
+    font-size: 0.9375rem;
+    margin-bottom: 36px;
+  }
+
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .testimonialCard {
+    padding: 18px;
+  }
+
+  .cardTop {
+    gap: 8px;
+    flex-wrap: nowrap;
+  }
+
+  .stars {
+    margin-left: auto;
+    flex-shrink: 0;
+  }
+
+  .quoteText {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 12px;
+  }
+}

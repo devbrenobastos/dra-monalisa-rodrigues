@@ -212,7 +212,6 @@
   font-weight: 500;
 }
 
-/* Media Queries */
 @media (min-width: 768px) {
   .ctaWrapper {
     align-items: flex-start;
@@ -232,5 +231,96 @@
   .container {
     grid-template-columns: 1.2fr 0.8fr;
     gap: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 88px;
+    padding-bottom: 48px;
+    min-height: unset;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 28px;
+    padding: 0 20px;
+  }
+
+  .copyCol {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* H1: fonte maior para caber em 2–3 linhas confortáveis */
+  .headline {
+    font-size: clamp(2.25rem, 8.5vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    text-align: center;
+  }
+
+  .subheadline {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-top: 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* "Tudo bem. O importante..." em negrito, destaque */
+  .subheroStrong {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.0625rem;
+    color: var(--text-primary);
+    font-style: normal;
+    line-height: 1.45;
+    margin-bottom: 4px;
+  }
+
+  .ctaWrapper {
+    margin-top: 28px;
+    align-items: center;
+    width: 100%;
+  }
+
+  /* CTA de ponta a ponta respeitando o padding lateral da seção */
+  .ctaButton {
+    width: 100%;
+    max-width: none;
+    padding: 16px 20px;
+    font-size: 1rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .microCopy {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .locationLabel {
+    text-align: center;
+  }
+
+  .imageContainer {
+    max-width: 100%;
+  }
+
+  .photoPlaceholder {
+    aspect-ratio: 16 / 9;
+    border-radius: 16px;
+  }
+
+  .floatingBadge {
+    font-size: 11px;
+    padding: 8px 12px;
+    bottom: -12px;
+    left: 12px;
   }
 }

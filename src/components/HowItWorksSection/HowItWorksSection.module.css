@@ -173,3 +173,44 @@
     right: 12px;
   }
 }
+
+@media (max-width: 767px) {
+  .inner {
+    padding: 0 20px;
+  }
+
+  .stepsRow {
+    gap: 12px;
+  }
+
+  .card {
+    padding: 24px 20px 20px;
+  }
+
+  .cardTitle {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  .cardText {
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  /* Seta vertical entre steps */
+  .card + .card {
+    position: relative;
+  }
+
+  .card + .card::before {
+    content: '↓';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: var(--rose);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

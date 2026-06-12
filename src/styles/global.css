@@ -153,3 +153,25 @@ img {
     scroll-behavior: auto !important;
   }
 }
+
+/* ── Global mobile polish ── */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 767px) {
+  section {
+    scroll-margin-top: 72px;
+  }
+
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

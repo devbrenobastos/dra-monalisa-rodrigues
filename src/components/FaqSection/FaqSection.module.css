@@ -111,3 +111,30 @@
   line-height: 1.7;
   font-family: var(--font-body);
 }
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .faqList {
+    max-width: 100%;
+  }
+
+  .faqItem {
+    border-radius: var(--radius-sm);
+    margin-bottom: 6px;
+  }
+
+  .faqTrigger {
+    padding: 16px;
+    min-height: 48px;
+    font-size: 0.9375rem;
+    gap: 12px;
+  }
+
+  .faqContent {
+    padding: 0 16px 16px;
+    font-size: 0.875rem;
+  }
+}
