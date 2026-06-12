@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 import { slideLeft, slideRight } from '../../animations/variants';
-import { ImplanteIllustration } from '../TreatmentIllustrations/ImplanteIllustration';
-import { CanalIllustration } from '../TreatmentIllustrations/CanalIllustration';
+import { ImplanteAnimation, CanalAnimation } from '../TreatmentAnimations';
 
 export const TreatmentsSection: React.FC = () => {
   return (
@@ -27,8 +26,9 @@ export const TreatmentsSection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <div className={styles.cardImage}>
-              <ImplanteIllustration />
+            <div className={styles.cardImageWrapper}>
+              <ImplanteAnimation />
+              <p className={styles.animTag}>✦ Encaixe perfeito</p>
               <span className={styles.imageBadge}>Para quem perdeu um dente</span>
             </div>
             
@@ -74,8 +74,13 @@ export const TreatmentsSection: React.FC = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <div className={styles.cardImage}>
-              <CanalIllustration />
+            <div className={styles.cardImageWrapper}>
+              <CanalAnimation />
+              <div className={styles.canalTagWrap}>
+                <p className={styles.canalTagDor}>✦ Você tem dor agora.</p>
+                <p className={styles.canalTagAlivio}>✦ Vai sair aliviado.</p>
+                <p className={styles.canalTagSemPerder}>✦ Sem perder o dente.</p>
+              </div>
               <span className={styles.imageBadge}>Para quem tem medo ou dor agora</span>
             </div>
             

@@ -70,18 +70,91 @@
   box-shadow: var(--shadow-soft);
 }
 
-.cardImage {
+.cardImageWrapper {
   position: relative;
-  height: 200px;
-  border-radius: 14px 14px 0 0;  /* arredonda só o topo */
+  border-radius: 14px 14px 0 0;
   overflow: hidden;
-  background: transparent;   /* deixa o gradiente do SVG aparecer */
 }
 
-.cardImage svg {
-  width: 100%;
-  height: 100%;
+.animTag {
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  padding: 8px 0 6px;
+  opacity: 0.7;
+  margin: 0;
+  background: var(--bg-base);
   display: block;
+}
+
+.canalTagWrap {
+  position: relative;
+  height: 24px;
+  background: var(--bg-base);
+  overflow: hidden;
+}
+
+.canalTagDor,
+.canalTagAlivio,
+.canalTagSemPerder {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 5px 0;
+  line-height: 1;
+  opacity: 0;
+}
+
+.canalTagDor {
+  color: var(--rose-cta);
+  animation: tagDorCycle 5s ease-in-out infinite;
+}
+
+.canalTagAlivio {
+  color: var(--sage);
+  animation: tagAlivioCycle 5s ease-in-out infinite;
+}
+
+.canalTagSemPerder {
+  color: var(--text-secondary);
+  animation: tagSemPerderCycle 5s ease-in-out infinite;
+}
+
+/* Ciclo de 5s dividido em 3 janelas com gap de ~0.4s entre cada uma */
+/* Text 1: 0–1.8s visível  |  gap até 2.2s  */
+/* Text 2: 2.2–3.65s       |  gap até 4.0s  */
+/* Text 3: 4.0–4.85s       |  fade até 5s   */
+
+@keyframes tagDorCycle {
+  0%, 5%  { opacity: 0.65; }
+  28%     { opacity: 0.65; }
+  36%     { opacity: 0; }
+  100%    { opacity: 0; }
+}
+
+@keyframes tagAlivioCycle {
+  0%, 44%  { opacity: 0; }
+  52%      { opacity: 0.75; }
+  65%      { opacity: 0.75; }
+  73%      { opacity: 0; }
+  100%     { opacity: 0; }
+}
+
+@keyframes tagSemPerderCycle {
+  0%, 80%  { opacity: 0; }
+  88%      { opacity: 0.7; }
+  97%      { opacity: 0.7; }
+  100%     { opacity: 0; }
 }
 
 .imageBadge {

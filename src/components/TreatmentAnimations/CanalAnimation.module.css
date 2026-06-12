@@ -1,0 +1,342 @@
+.stage {
+  height: 240px;
+  background: var(--bg-base);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canalScene {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  perspective: 500px;
+}
+
+/* ── Dente 3D ── */
+.toothWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%) rotateX(8deg) rotateY(-12deg);
+  transform-style: preserve-3d;
+}
+
+.tooth3d {
+  position: relative;
+  width: 64px;
+  height: 80px;
+}
+
+.toothFace {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #FEFCF8 0%, #F4EFE8 50%, #EAE4D8 100%);
+  border-radius: 12px 12px 6px 6px;
+  box-shadow:
+    4px 4px 16px rgba(42,36,38,0.12),
+    -2px -2px 8px rgba(255,255,255,0.8),
+    inset -3px -3px 8px rgba(42,36,38,0.04);
+  overflow: hidden;
+}
+
+/* Face lateral — profundidade 3D */
+.toothSide {
+  position: absolute;
+  top: 4px;
+  right: -10px;
+  width: 10px;
+  height: calc(100% - 8px);
+  background: linear-gradient(90deg, #E0D8CC 0%, #D4CBBD 100%);
+  border-radius: 0 6px 6px 0;
+  clip-path: polygon(0 0, 100% 6%, 100% 100%, 0 94%);
+}
+
+/* Topo do dente */
+.toothTop {
+  position: absolute;
+  top: -6px;
+  left: 4px;
+  width: calc(100% - 4px);
+  height: 12px;
+  background: linear-gradient(180deg, #F8F4EC 0%, #EDE6D8 100%);
+  border-radius: 8px 8px 0 0;
+  clip-path: polygon(4% 0, 100% 0, 96% 100%, 0 100%);
+}
+
+/* ── Raízes ── */
+.roots {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.root {
+  width: 14px;
+  height: 36px;
+  background: linear-gradient(180deg, #EAE4D8 0%, #D8D0C4 60%, #C8C0B4 100%);
+  border-radius: 3px 3px 8px 8px;
+  box-shadow: 2px 2px 6px rgba(42,36,38,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.rootCanal {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 4px; height: 100%;
+  border-radius: 2px;
+  background: transparent;
+}
+
+/* ── Inflamação interna ── */
+.inflammation {
+  position: absolute;
+  top: 18px; left: 50%;
+  transform: translateX(-50%);
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(151,69,90,0.38) 0%,
+    rgba(198,131,147,0.16) 60%,
+    transparent 100%
+  );
+  animation: fadeInflam 3.5s ease-in-out infinite;
+}
+
+@keyframes fadeInflam {
+  0%, 20%  { opacity: 1; transform: translateX(-50%) scale(1); }
+  55%      { opacity: 0.08; transform: translateX(-50%) scale(0.3); }
+  80%      { opacity: 0.08; }
+  92%      { opacity: 1; transform: translateX(-50%) scale(1); }
+  100%     { opacity: 1; }
+}
+
+/* ── Luz de limpeza ── */
+.cleanLight {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  border-radius: 3px;
+  background: linear-gradient(
+    180deg,
+    rgba(110,122,102,0) 0%,
+    rgba(110,122,102,0.6) 50%,
+    rgba(110,122,102,0) 100%
+  );
+  animation: cleanPass 3.5s ease-in-out infinite;
+}
+
+@keyframes cleanPass {
+  0%   { height: 0;    top: 0; opacity: 0; }
+  8%   { opacity: 0.85; }
+  45%  { height: 120px; top: 0; opacity: 0.85; }
+  68%  { height: 120px; top: 0; opacity: 0; }
+  100% { height: 0;    top: 0; opacity: 0; }
+}
+
+/* ── Ondas de dor ── */
+.painWave {
+  position: absolute;
+  top: 38px; left: 50%;
+  transform: translateX(-50%);
+  width: 80px; height: 80px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(151,69,90,0.32);
+  animation: painWave 3.5s ease-out infinite;
+  pointer-events: none;
+}
+
+.painWave:nth-child(2) { animation-delay: 0.7s; }
+.painWave:nth-child(3) { animation-delay: 1.4s; }
+
+@keyframes painWave {
+  0%   { transform: translateX(-50%) scale(0.4); opacity: 0.7; }
+  40%  { opacity: 0.4; }
+  70%  { transform: translateX(-50%) scale(1.6); opacity: 0; }
+  /* Para quando a cura começa */
+  55%, 100% { opacity: 0; }
+}
+
+/* ── Glow de cura ── */
+.healGlow {
+  position: absolute;
+  inset: -8px;
+  border-radius: 20px;
+  background: radial-gradient(
+    circle at 50% 38%,
+    rgba(110,122,102,0.2) 0%,
+    transparent 68%
+  );
+  animation: healGlow 3.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes healGlow {
+  0%, 28% { opacity: 0; }
+  58%     { opacity: 1; }
+  100%    { opacity: 0; }
+}
+
+/* ── Estrelinhas de alívio ── */
+.reliefStar {
+  position: absolute;
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--sage);
+  animation: reliefPop 3.5s ease-in-out infinite;
+  opacity: 0;
+}
+
+.rs1 { top: 10px; left: -18px; animation-delay: 2.0s; }
+.rs2 { top: 18px; right: -20px; animation-delay: 2.2s; }
+.rs3 { top: 0px;  left: 50%;   animation-delay: 2.4s; }
+
+@keyframes reliefPop {
+  0%, 50%  { opacity: 0; transform: scale(0); }
+  65%      { opacity: 0.85; transform: scale(1.2); }
+  80%      { opacity: 0.5; transform: scale(0.8) translateY(-6px); }
+  96%      { opacity: 0; }
+  100%     { opacity: 0; }
+}
+
+/* ── Gengiva ── */
+.canalGum {
+  position: absolute;
+  bottom: 10px; left: 50%;
+  transform: translateX(-50%);
+  width: 110px; height: 22px;
+  background: linear-gradient(180deg, #E0B8C0 0%, #D0A8B0 100%);
+  border-radius: 50% 50% 6px 6px / 14px 14px 6px 6px;
+  box-shadow: 0 3px 10px rgba(151,69,90,0.14);
+}
+
+/* ── Face de dor (fase inicial) ── */
+.painFace {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(151,69,90,0.08);
+  border: 1px solid rgba(151,69,90,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: painFaceAnim 3.5s ease-in-out infinite;
+}
+
+@keyframes painFaceAnim {
+  0%, 15%   { opacity: 1; transform: scale(1); }
+  45%, 100% { opacity: 0; transform: scale(0.8); }
+}
+
+/* Sobrancelhas franzidas */
+.browLeft,
+.browRight {
+  position: absolute;
+  top: 8px;
+  width: 8px;
+  height: 2px;
+  background: rgba(151,69,90,0.6);
+  border-radius: 1px;
+}
+.browLeft  { left: 6px;  transform: rotate(20deg); }
+.browRight { right: 6px; transform: rotate(-20deg); }
+
+/* Olhos fechados/apertados */
+.eyeLeft,
+.eyeRight {
+  position: absolute;
+  top: 15px;
+  width: 6px;
+  height: 2px;
+  background: rgba(151,69,90,0.55);
+  border-radius: 1px;
+}
+.eyeLeft  { left: 7px; }
+.eyeRight { right: 7px; }
+
+/* Boca tensa — arco invertido */
+.mouthPain {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 12px;
+  height: 4px;
+  border-radius: 0 0 6px 6px;
+  border: 1.5px solid rgba(151,69,90,0.45);
+  border-top: none;
+  transform: translateX(-50%) scaleY(-1);
+}
+
+/* ── Face de alívio (fase final) ── */
+.reliefFace {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(110,122,102,0.1);
+  border: 1px solid rgba(110,122,102,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: reliefFaceAnim 3.5s ease-in-out infinite;
+}
+
+@keyframes reliefFaceAnim {
+  0%, 50%  { opacity: 0; transform: scale(0.8); }
+  65%      { opacity: 1; transform: scale(1); }
+  85%      { opacity: 1; }
+  100%     { opacity: 0; transform: scale(0.8); }
+}
+
+/* Olhos relaxados — semicerrados de alívio */
+.eyeRelaxLeft,
+.eyeRelaxRight {
+  position: absolute;
+  top: 13px;
+  width: 8px;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  border: 1.5px solid rgba(110,122,102,0.55);
+  border-bottom: none;
+}
+.eyeRelaxLeft  { left: 6px; }
+.eyeRelaxRight { right: 6px; }
+
+/* Sorriso suave */
+.mouthRelief {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 5px;
+  border-radius: 0 0 8px 8px;
+  border: 1.5px solid rgba(110,122,102,0.5);
+  border-top: none;
+}
+
+/* ── Acessibilidade ── */
+@media (prefers-reduced-motion: reduce) {
+  .inflammation { animation: none; opacity: 0.15; }
+  .cleanLight,
+  .painWave,
+  .healGlow,
+  .reliefStar,
+  .painFace,
+  .reliefFace { animation: none; opacity: 0; }
+  .cleanLight { height: 80px; opacity: 0.4; }
+}
