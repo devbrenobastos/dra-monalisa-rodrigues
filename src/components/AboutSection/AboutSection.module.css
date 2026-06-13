@@ -1,7 +1,7 @@
 .section {
-  background-color: var(--bg-deep);
+  background: var(--bg-dark-gradient); /* Premium gradient */
   color: var(--text-on-dark);
-  padding: 96px 0;
+  padding: 120px 0;
   position: relative;
   overflow: hidden; /* impede watermark de vazar */
 }
@@ -14,11 +14,17 @@
   height: 100px;
   background: linear-gradient(
     180deg,
-    rgba(247, 244, 248, 0.07) 0%,
+    rgba(248, 246, 244, 0.05) 0%,
     transparent 100%
   );
   pointer-events: none;
   z-index: 0;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -69,26 +75,26 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--rose);
+  color: var(--amber); /* Destaque Champagne */
   margin-bottom: 12px;
 }
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(2.25rem, 3.5vw, 2.875rem);
+  font-size: var(--text-3xl); /* 44px */
   color: var(--text-on-dark);
-  font-weight: var(--weight-regular);
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  margin-bottom: 16px;
-  max-width: 460px;
+  font-weight: var(--weight-semibold); /* weight 600 */
+  line-height: var(--leading-snug); /* 1.15 */
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: 24px; /* Title -> content space: 24px */
+  max-width: 580px;
 }
 
 .title em {
   font-family: var(--font-display);
   font-style: italic;
   font-weight: inherit;
-  color: var(--rose);
+  color: var(--amber);
 }
 
 .bodyText {
@@ -163,26 +169,25 @@
 
 .ctaButton {
   background: transparent;
-  color: var(--text-on-dark);
-  border: 1.5px solid rgba(247, 244, 248, 0.3);
+  color: #FFFFFF;
+  border: 1px solid var(--rose-cta);
   font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 1.0625rem;
-  padding: 16px 36px;
+  font-weight: var(--weight-semibold); /* 600 */
+  font-size: 0.9375rem; /* 15px */
+  padding: 0 28px;
+  height: 52px;
   border-radius: var(--radius-pill);
   text-decoration: none;
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
   align-self: flex-start;
   text-align: center;
-  min-height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
 
 .ctaButton:hover {
-  border-color: var(--text-on-dark);
-  background: rgba(247, 244, 248, 0.05);
+  background: rgba(142, 61, 82, 0.05);
 }
 
 .imageCol {

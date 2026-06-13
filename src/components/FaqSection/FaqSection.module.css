@@ -1,6 +1,12 @@
 .section {
   background-color: var(--bg-base);
-  padding: 96px 0;
+  padding: 120px 0;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -27,17 +33,13 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--rose-cta);
-  margin-bottom: 12px;
+  margin-bottom: 24px; /* Title -> eyebrow space: 24px */
   display: block;
 }
 
 .title {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);         /* 30px — ERA MAIOR, agora reduz */
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-snug);  /* 1.2 */
-  letter-spacing: var(--tracking-tight);
-  color: var(--text-primary);
+  composes: section-title from "../../styles/global.css";
+  text-align: center;
 }
 
 .title em {
@@ -55,23 +57,24 @@
 }
 
 .faqItem {
-  border: 1px solid var(--mist); /* borda full, não só bottom */
+  border: 1px solid var(--mist);
   border-radius: var(--radius-md);
-  margin-bottom: 8px;
+  margin-bottom: 12px; /* mais espaço entre os itens */
   overflow: hidden;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  background-color: var(--bg-surface);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #FFFFFF; /* Fundo branco nos cards */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
 }
 
 .faqItem:hover {
   border-color: var(--rose);
-  box-shadow: var(--shadow-sm);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
 }
 
 .faqTrigger {
   font-family: var(--font-body);
-  font-size: var(--text-base); /* 17px */
-  font-weight: 500;
+  font-size: var(--text-md); /* Pergunta: 18px */
+  font-weight: var(--weight-semibold); /* weight: 600 */
   color: var(--text-primary);
   text-align: left;
   width: 100%;
@@ -81,9 +84,8 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 20px 24px; /* era pequeno */
+  padding: 24px 32px; /* Mais espaço interno */
   gap: 16px;
-  min-height: 48px;
   transition: color 0.2s ease;
   line-height: 1.4;
 }
@@ -105,10 +107,10 @@
 }
 
 .faqContent {
-  padding: 12px 24px 20px;
-  font-size: 0.9375rem; /* 15px */
+  padding: 0 32px 24px; /* Mais espaço interno */
+  font-size: var(--text-base); /* Resposta: 16px */
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: var(--leading-loose); /* line-height 1.8 */
   font-family: var(--font-body);
 }
 
@@ -123,18 +125,17 @@
 
   .faqItem {
     border-radius: var(--radius-sm);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   .faqTrigger {
-    padding: 16px;
-    min-height: 48px;
-    font-size: 0.9375rem;
+    padding: 20px;
+    font-size: var(--text-base); /* 16px no mobile */
     gap: 12px;
   }
 
   .faqContent {
-    padding: 0 16px 16px;
-    font-size: 0.875rem;
+    padding: 0 20px 20px;
+    font-size: 0.9375rem; /* 15px mobile */
   }
 }

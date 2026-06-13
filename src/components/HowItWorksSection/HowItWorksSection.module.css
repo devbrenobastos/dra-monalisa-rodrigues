@@ -1,6 +1,12 @@
-﻿.section {
-  padding: 112px 0;
+.section {
+  padding: 120px 0;
   background: var(--bg-base);
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -10,31 +16,27 @@
 }
 
 .inner {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 24px;
 }
 
 @media (max-width: 767px) {
   .inner {
-    padding: 0 24px;
+    padding: 0 20px;
   }
 }
 
 .header {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
 }
 
 .sectionTitle {
-  font-family: var(--font-display);
-  font-size: clamp(1.875rem, 3vw, 2.375rem);
-  font-weight: var(--weight-regular);
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: var(--text-primary);
+  composes: section-title from "../../styles/global.css";
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 24px; /* Title -> content space: 24px */
+  text-align: center;
 }
 
 .sectionTitle em {
@@ -55,15 +57,13 @@
 /* ─── CARD ─── */
 .card {
   position: relative;
-  background: var(--bg-surface);
-  border-radius: 20px;
-  padding: 36px 32px 32px;
+  background: #FFFFFF;
+  border-radius: 24px;
+  padding: 32px;
   overflow: hidden;
-  box-shadow: 0 2px 24px rgba(30, 27, 58, 0.055),
-              0 1px 4px  rgba(30, 27, 58, 0.04);
-  border: 1px solid rgba(222, 214, 204, 0.7);
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
-              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(142, 61, 82, 0.08);
+  transition: transform 300ms ease, box-shadow 300ms ease;
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -71,9 +71,8 @@
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(30, 27, 58, 0.10),
-              0 2px 8px  rgba(30, 27, 58, 0.05);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 /* Linha superior colorida — assinatura do card */
@@ -180,21 +179,21 @@
   }
 
   .stepsRow {
-    gap: 12px;
+    gap: 16px;
   }
 
   .card {
-    padding: 24px 20px 20px;
+    padding: 24px;
   }
 
   .cardTitle {
-    font-size: 1rem;
-    margin-bottom: 6px;
+    font-size: var(--text-base); /* 16px */
+    margin-bottom: 8px;
   }
 
   .cardText {
-    font-size: 0.875rem;
-    line-height: 1.6;
+    font-size: 0.9375rem; /* 15px mobile text */
+    line-height: var(--leading-relaxed);
   }
 
   /* Seta vertical entre steps */

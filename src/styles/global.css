@@ -2,25 +2,27 @@
 
 :root {
   /* ── Fundos ── */
-  --bg-base:    #F7F4F8;
-  --bg-surface: #FDFCFE;
+  --bg-base:    #F8F6F4;
+  --bg-surface: #F2ECE7;
+  --bg-dark-gradient: linear-gradient(135deg, #1F1730, #2A2140, #312549);
 
-  /* ── Seções escuras: violeta profundo ── */
-  --bg-deep: #1E1B3A;
+  /* ── Seções escuras: azul profundo ── */
+  --bg-deep: #273F63;
 
   /* ── Névoa/bordas ── */
-  --mist: #D8D0DC;
+  --mist: rgba(142, 61, 82, 0.08);
 
   /* ── Texto ── */
-  --text-primary:   #1E1B3A;
-  --text-secondary: #5A5468;
-  --text-on-dark:   #F7F4F8;
+  --text-primary:   #1B1B1B;
+  --text-secondary: #5F5A56;
+  --text-on-dark:   #F8F6F4;
 
-  /* ── Lilás ── */
-  --rose-wash: #EDD8E8;
-  --rose:      #C090B8;
-  --rose-cta:  #7A3D72;
-  --rose-deep: #5C2A56;
+  /* ── Lilás / Rosê / Destaques ── */
+  --rose-wash: rgba(142, 61, 82, 0.08);
+  --rose:      #8E3D52;
+  --rose-cta:  #8E3D52;
+  --rose-deep: #7A3446;
+  --amber:     #D6B06A; /* Champagne */
 
   /* ── Fontes ── */
   --font-display: 'Libre Baskerville', Georgia, serif;
@@ -28,17 +30,17 @@
 
   /* ============================================
      ESCALA TIPOGRÁFICA — RATIO 1.25 (Major Third)
-     Base: 17px
+     Base: 16px
      ============================================ */
   --text-xs:   0.75rem;
   --text-sm:   0.875rem;
-  --text-base: 1.0625rem;
-  --text-md:   1.25rem;
-  --text-lg:   1.5rem;
-  --text-xl:   1.875rem;
-  --text-2xl:  2.25rem;
-  --text-3xl:  2.75rem;
-  --text-4xl:  clamp(2.25rem, 3.5vw, 3rem);
+  --text-base: 1rem;       /* 16px */
+  --text-md:   1.125rem;   /* 18px */
+  --text-lg:   1.375rem;
+  --text-xl:   2rem;       /* 32px - Mobile H2 */
+  --text-2xl:  2.375rem;   /* 38px - Tablet H2 */
+  --text-3xl:  2.75rem;    /* 44px - Desktop H2 */
+  --text-4xl:  3.5rem;     /* 56px - Hero H1 */
 
   /* Pesos */
   --weight-regular: 400;
@@ -46,11 +48,11 @@
   --weight-semibold: 600;
 
   /* Line-heights */
-  --leading-tight:   1.1;
-  --leading-snug:    1.2;
+  --leading-tight:   1.05;   /* Hero H1 */
+  --leading-snug:    1.15;   /* Section H2 */
   --leading-normal:  1.5;
-  --leading-relaxed: 1.7;
-  --leading-loose:   1.8;
+  --leading-relaxed: 1.7;    /* Subtitles */
+  --leading-loose:   1.8;    /* Body text */
 
   /* Letter-spacing */
   --tracking-tight:  -0.025em;
@@ -63,9 +65,9 @@
   --radius-lg:   24px;
   --radius-pill: 999px;
 
-  --shadow-soft: 0 4px 24px rgba(30, 27, 58, 0.09);
-  --shadow-card: 0 2px 16px rgba(30, 27, 58, 0.06);
-  --shadow-sm:   0 2px 8px  rgba(30, 27, 58, 0.04);
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.02);
+  --shadow-sm:   0 2px 8px  rgba(0, 0, 0, 0.02);
 }
 
 /* Reset and base styling */
@@ -110,9 +112,29 @@ body {
   background-color: var(--bg-base);
   color: var(--text-primary);
   min-height: 100vh;
-  line-height: var(--leading-relaxed);
-  font-size: var(--text-base); /* 17px - Never below 17px */
+  line-height: var(--leading-loose); /* 1.8 */
+  font-size: var(--text-base); /* 16px */
   -webkit-font-smoothing: antialiased;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-3xl); /* 44px */
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug); /* 1.15 */
+  color: var(--text-primary);
+}
+
+@media (max-width: 1023px) {
+  .section-title {
+    font-size: var(--text-2xl); /* 38px */
+  }
+}
+
+@media (max-width: 767px) {
+  .section-title {
+    font-size: var(--text-xl); /* 32px */
+  }
 }
 
 .section-inner {

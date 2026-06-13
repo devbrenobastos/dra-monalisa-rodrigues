@@ -1,6 +1,12 @@
 .section {
   background-color: var(--bg-base);
-  padding: 96px 0;
+  padding: 120px 0;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -27,17 +33,13 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--rose-cta);
-  margin-bottom: 12px;
+  margin-bottom: 24px; /* Title -> eyebrow space: 24px */
   display: block;
 }
 
 .title {
-  font-family: var(--font-display);
-  font-size: var(--text-xl);         /* 30px — ERA MAIOR, agora reduz */
-  font-weight: var(--weight-regular);
-  line-height: var(--leading-snug);  /* 1.2 */
-  letter-spacing: var(--tracking-tight);
-  color: var(--text-primary);
+  composes: section-title from "../../styles/global.css";
+  text-align: center;
 }
 
 .title em {
@@ -55,19 +57,19 @@
 }
 
 .card {
-  background: var(--bg-surface);
-  border: 1px solid var(--mist);
-  border-radius: var(--radius-lg);
+  background: #FFFFFF;
+  border: 1px solid rgba(142, 61, 82, 0.08);
+  border-radius: 24px;
   overflow: hidden;
-  box-shadow: var(--shadow-card);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  transition: transform 300ms ease, box-shadow 300ms ease;
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .cardImageWrapper {
@@ -194,7 +196,7 @@
 }
 
 .content {
-  padding: 28px 28px 24px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -267,16 +269,16 @@
 .cardCta {
   background: transparent;
   color: var(--text-primary);
-  border: 1.5px solid var(--mist);
+  border: 1px solid var(--rose-cta);
   font-family: var(--font-body);
-  font-weight: var(--weight-medium); /* 500 */
-  font-size: var(--text-base); /* 17px */
-  padding: 14px 28px;
+  font-weight: var(--weight-semibold); /* 600 */
+  font-size: 0.9375rem; /* 15px */
+  padding: 0 28px;
+  height: 52px;
   border-radius: var(--radius-pill);
   text-decoration: none;
   text-align: center;
-  transition: all 0.25s ease;
-  min-height: 48px;
+  transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -286,9 +288,9 @@
 }
 
 .cardCta:hover {
-  border-color: var(--rose);
-  color: var(--rose-deep);
-  background: var(--bg-surface);
+  border-color: var(--rose-cta);
+  color: var(--rose-cta);
+  background: rgba(142, 61, 82, 0.05);
 }
 
 @media (min-width: 768px) {
@@ -354,7 +356,8 @@
   .cardCta {
     width: 100%;
     justify-content: center;
-    padding: 14px 20px;
+    padding: 0 28px;
+    height: 52px;
     font-size: 0.9375rem;
   }
 }

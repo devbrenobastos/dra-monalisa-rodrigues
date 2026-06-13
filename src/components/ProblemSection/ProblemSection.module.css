@@ -1,6 +1,12 @@
 .problemSection {
   background-color: var(--bg-base);
-  padding: 96px 0;
+  padding: 120px 0;
+}
+
+@media (max-width: 1023px) {
+  .problemSection {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -10,7 +16,7 @@
 }
 
 .problemInner {
-  max-width: 640px;
+  max-width: 680px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -18,18 +24,13 @@
 .labelWrapper {
   display: flex;
   justify-content: center;  /* centraliza só o label */
-  margin-bottom: 20px;
+  margin-bottom: 24px; /* Title -> eyebrow space: 24px */
 }
 
 .sectionTitle {
-  font-family: var(--font-display);
-  font-size: clamp(1.875rem, 3vw, 2.375rem);
-  font-weight: var(--weight-regular);
-  line-height: 1.15;
-  letter-spacing: -0.025em;
-  color: var(--text-primary);
+  composes: section-title from "../../styles/global.css";
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 40px; /* Title -> content space: 40px */
 }
 
 .sectionTitle em {
@@ -46,13 +47,13 @@
 
 .storyParagraph {
   font-family: var(--font-body);
-  font-size: 1.0625rem;   /* 17px — base */
+  font-size: var(--text-base); /* 16px */
   font-weight: 400;
-  line-height: 1.75;
+  line-height: var(--leading-loose); /* 1.8 */
   color: var(--text-secondary);
   margin-bottom: 20px;
   text-align: center;
-  max-width: 580px;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   text-wrap: balance;
@@ -61,11 +62,11 @@
 .storyImpact {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.375rem;               /* 22px — maior, destaque */
+  font-size: var(--text-lg);
   font-weight: 400;
-  line-height: 1.3;
-  color: var(--text-primary);        /* mais escuro que o parágrafo */
-  margin-bottom: 20px;
+  line-height: 1.35;
+  color: var(--text-primary);
+  margin-bottom: 24px;
   text-align: center;
   text-wrap: balance;
 }

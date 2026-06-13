@@ -1,7 +1,7 @@
-﻿.section {
-  background-color: var(--bg-deep);
+.section {
+  background: var(--bg-dark-gradient); /* premium dark gradient */
   color: var(--text-on-dark);
-  padding: 112px 0;
+  padding: 120px 0;
   position: relative;
   overflow: hidden;
   text-align: center;
@@ -15,11 +15,17 @@
   height: 100px;
   background: linear-gradient(
     180deg,
-    rgba(247, 244, 248, 0.06) 0%,
+    rgba(248, 246, 244, 0.05) 0%,
     transparent 100%
   );
   pointer-events: none;
   z-index: 0;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    padding: 80px 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -52,7 +58,7 @@
 }
 
 .content {
-  max-width: 560px;
+  max-width: 600px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -60,14 +66,9 @@
 }
 
 .title {
-  font-family: var(--font-display);
-  font-size: clamp(2.25rem, 3.5vw, 2.875rem);
-  font-weight: 400;
-  line-height: 1.15;
-  letter-spacing: -0.025em;
+  composes: section-title from "../../styles/global.css";
   color: var(--text-on-dark);
-  margin: 0 auto 20px;
-  max-width: 520px;
+  margin: 0 auto 24px; /* Title -> content space: 24px */
   text-align: center;
 }
 
@@ -75,7 +76,7 @@
   font-family: var(--font-display);
   font-style: italic;
   font-weight: inherit;
-  color: var(--rose);
+  color: var(--amber); /* champagne highlight */
 }
 
 .bodyText {
@@ -87,11 +88,11 @@
 
 .bodyText p {
   font-family: var(--font-body);
-  font-size: var(--text-base);
-  line-height: var(--leading-loose);
+  font-size: var(--text-base); /* 16px */
+  line-height: var(--leading-loose); /* 1.8 */
   color: var(--text-on-dark);
-  opacity: 0.8;
-  max-width: 480px;
+  opacity: 0.85;
+  max-width: 500px;
   margin: 0 auto;
   text-align: center;
 }
@@ -107,23 +108,26 @@
 
 .ctaButton {
   background: var(--rose-cta);
-  color: var(--bg-surface);
+  color: #FFFFFF; /* white text */
   font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 1.0625rem; /* 17px */
-  padding: 18px 44px;
-  border-radius: var(--radius-pill);
+  font-weight: var(--weight-semibold); /* 600 */
+  font-size: 0.9375rem; /* 15px */
+  padding: 0 28px; /* Padding horizontal 28px */
+  height: 52px; /* Altura 52px */
+  border-radius: var(--radius-pill); /* 999px */
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(122, 61, 114, 0.35);
+  box-shadow: 0 4px 14px rgba(142, 61, 82, 0.15);
   text-align: center;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
+  transition: all 0.3s ease;
 }
 
 .ctaButton:hover {
-  background: var(--rose-deep);
+  background: var(--rose-deep); /* #7A3446 */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(142, 61, 82, 0.25);
 }
 
 .microCopy {
@@ -156,11 +160,11 @@
 
 @media (max-width: 767px) {
   .section {
-    padding: 72px 0;
+    padding: 64px 0;
   }
 
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
   .content {
@@ -168,13 +172,14 @@
   }
 
   .title {
-    font-size: clamp(1.625rem, 6vw, 2rem);
-    margin-bottom: 16px;
+    font-size: var(--text-xl); /* 32px */
+    line-height: var(--leading-snug);
+    margin-bottom: 24px;
   }
 
   .bodyText p {
-    font-size: 0.9375rem;
-    line-height: 1.65;
+    font-size: var(--text-base); /* 16px */
+    line-height: var(--leading-loose); /* 1.8 */
     max-width: 100%;
   }
 
@@ -185,8 +190,9 @@
   .ctaButton {
     width: 100%;
     max-width: none;
-    padding: 18px 24px;
-    font-size: 1rem;
+    padding: 0 28px;
+    height: 52px;
+    font-size: 0.9375rem;
     text-align: center;
     justify-content: center;
   }
