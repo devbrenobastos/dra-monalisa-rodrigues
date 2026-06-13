@@ -18,6 +18,31 @@
   --radius-lg: 24px; --radius-pill: 999px;
   --shadow-soft: 0 4px 24px rgba(26,37,54,.08);
   --shadow-card: 0 2px 16px rgba(26,37,54,.04);
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.375rem;
+  --text-xl: 2rem;
+  --text-2xl: 2.375rem;
+  --text-3xl: 2.75rem;
+  --text-4xl: 3.5rem;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+
+  --leading-tight: 1.05;
+  --leading-snug: 1.15;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.7;
+  --leading-loose: 1.8;
+
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.12em;
 }
 
 /* Reset and base styling */
