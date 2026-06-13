@@ -7,23 +7,23 @@ import { fadeUp, staggerContainer } from '../../animations/variants';
 export const CredentialsBar: React.FC = () => {
   const items = [
     {
-      icon: <Award className={styles.icon} size={24} />,
+      icon: <Award className={styles.icon} size={20} />,
       number: '2.000+',
       label: 'Casos de canal'
     },
     {
-      icon: <Star className={styles.icon} size={24} />,
+      icon: <Star className={styles.icon} size={20} />,
       number: 'Nota 5,0 ★',
       label: 'no Google',
       isGoogle: true
     },
     {
-      icon: <CheckCircle className={styles.icon} size={24} />,
+      icon: <CheckCircle className={styles.icon} size={20} />,
       number: 'Dr. Rafael',
-      label: 'Implante & Perio'
+      label: 'Implante & Periodontia'
     },
     {
-      icon: <Heart className={styles.icon} size={24} />,
+      icon: <Heart className={styles.icon} size={20} />,
       number: 'Dra. Monalisa',
       label: 'Endodontia'
     }
