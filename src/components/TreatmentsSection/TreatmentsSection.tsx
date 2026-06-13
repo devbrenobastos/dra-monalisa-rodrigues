@@ -4,9 +4,15 @@ import { motion } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 import { slideLeft, slideRight } from '../../animations/variants';
-import { ImplanteAnimation, CanalAnimation } from '../TreatmentAnimations';
 
 export const TreatmentsSection: React.FC = () => {
+  // Configuração para acelerar a reprodução do vídeo para 5-6 segundos (se a duração original for um pouco maior)
+  const handleVideoMount = (el: HTMLVideoElement | null) => {
+    if (el) {
+      el.playbackRate = 1.5; // acelera a reprodução
+    }
+  };
+
   return (
     <section className={styles.section} id="tratamentos">
       <div className={styles.container}>
@@ -27,7 +33,18 @@ export const TreatmentsSection: React.FC = () => {
             viewport={{ once: true, margin: "-80px" }}
           >
             <div className={styles.cardImageWrapper}>
-              <ImplanteAnimation />
+              <div className={styles.videoStage}>
+                <video
+                  ref={handleVideoMount}
+                  src="/videos/implante_video.mp4"
+                  className={styles.treatmentVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                />
+              </div>
               <p className={styles.animTag}>✦ Encaixe perfeito</p>
               <span className={styles.imageBadge}>Para quem perdeu um dente</span>
             </div>
@@ -75,7 +92,18 @@ export const TreatmentsSection: React.FC = () => {
             viewport={{ once: true, margin: "-80px" }}
           >
             <div className={styles.cardImageWrapper}>
-              <CanalAnimation />
+              <div className={styles.videoStage}>
+                <video
+                  ref={handleVideoMount}
+                  src="/videos/canal_video.mp4"
+                  className={styles.treatmentVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                />
+              </div>
               <div className={styles.canalTagWrap}>
                 <p className={styles.canalTagDor}>✦ Você tem dor agora.</p>
                 <p className={styles.canalTagAlivio}>✦ Vai sair aliviado.</p>
