@@ -62,10 +62,6 @@ export const FaqSection: React.FC = () => {
 
   const faqs = [
     {
-      q: "Vocês atendem por plano odontológico?",
-      a: "Nosso foco é no atendimento particular, onde podemos dedicar tempo e recursos ideais para cada caso. Para convênios, atendemos exclusivamente pelo plano Uniodonto — entre em contato para verificar sua cobertura."
-    },
-    {
       q: "Tratamento de canal dói?",
       a: "Com anestesia moderna, não. A sensação mais comum é alívio, porque a dor que existia antes desaparece. Se sentir qualquer desconforto, sinaliza e a gente adapta."
     },
@@ -84,6 +80,10 @@ export const FaqSection: React.FC = () => {
     {
       q: "Vocês atendem em Campinas?",
       a: "Nosso consultório fica em Vinhedo, com fácil acesso à região de Campinas. Muitos pacientes vêm de cidades vizinhas e dizem que vale o deslocamento."
+    },
+    {
+      q: "Vocês atendem por plano odontológico?",
+      a: "Atendemos exclusivamente pelo plano Uniodonto."
     }
   ];
 
