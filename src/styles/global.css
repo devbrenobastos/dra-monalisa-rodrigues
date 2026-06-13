@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 :root {
   /* ── Fundos ── */
   --bg-base: #F4F0EA;
   --bg-surface: #FAFAF6;
 
-  /* ── Seções escuras: navy premium ── */
-  --bg-deep: #1D3255;
+  /* ── Seções escuras: slate ── */
+  --bg-deep: #2C3E4A;
 
   /* ── Névoa/bordas ── */
-  --mist: #DDD6CC;
+  --mist: #D8D2C8;
 
   /* ── Texto ── */
-  --text-primary: #1A2A3A;
-  --text-secondary: #5C6670;
+  --text-primary: #2C3E4A;
+  --text-secondary: #5A6670;
   --text-on-dark: #F4F0EA;
 
   /* ── Rosé ── */
@@ -22,21 +22,16 @@
   --rose-cta: #8E3D52;
   --rose-deep: #6E2D40;
 
-  /* ── Navy ── */
-  --navy: #1D3255;
-  --navy-mid: #2C4A70;
-  --navy-light: #3D6494;
-
   /* ── Âmbar ── */
-  --amber: #C89840;
-  --amber-light: #D4A853;
-  --amber-wash: #F5EDD8;
+  --amber: #D4A84A;
+  --amber-light: #E4BC6A;
+  --amber-wash: #F6EDD6;
 
   /* ── Sage ── */
-  --sage: #5E7260;
+  --sage: #5C6C60;
 
   /* ── Fontes ── */
-  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Libre Baskerville', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
 
   /* ============================================
@@ -76,9 +71,9 @@
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  --shadow-soft: 0 4px 24px rgba(29, 50, 85, 0.08);
-  --shadow-card: 0 2px 16px rgba(29, 50, 85, 0.06);
-  --shadow-sm:   0 2px 8px  rgba(29, 50, 85, 0.04);
+  --shadow-soft: 0 4px 24px rgba(44, 62, 74, 0.08);
+  --shadow-card: 0 2px 16px rgba(44, 62, 74, 0.06);
+  --shadow-sm:   0 2px 8px  rgba(44, 62, 74, 0.04);
 }
 
 /* Reset and base styling */
@@ -108,7 +103,7 @@ html {
 }
 
 ::selection {
-  background: var(--rose-wash);
+  background: var(--amber-wash);
   color: var(--rose-deep);
 }
 

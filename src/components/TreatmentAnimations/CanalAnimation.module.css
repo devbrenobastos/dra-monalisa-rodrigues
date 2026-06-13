@@ -42,9 +42,9 @@
   );
   border-radius: 14px 14px 8px 8px;
   box-shadow:
-    5px 5px 18px rgba(42, 36, 38, 0.14),
+    5px 5px 18px rgba(44, 62, 74, 0.14),
     -3px -3px 10px rgba(255, 255, 255, 0.85),
-    inset -4px -4px 10px rgba(42, 36, 38, 0.05);
+    inset -4px -4px 10px rgba(44, 62, 74, 0.05);
   overflow: hidden;
 }
 
@@ -92,7 +92,7 @@
     #C0B49E 100%
   );
   border-radius: 4px 4px 10px 10px;
-  box-shadow: 2px 2px 8px rgba(42, 36, 38, 0.1);
+  box-shadow: 2px 2px 8px rgba(44, 62, 74, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -351,6 +351,94 @@
   border-top: none;
 }
 
+/* ── Lima rotatória NiTi ── */
+.rotaryFile {
+  position: absolute;
+  top: -72px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  animation: fileDrill 3.5s ease-in-out infinite;
+  z-index: 20;
+}
+
+@keyframes fileDrill {
+  0%          { top: -72px; opacity: 0; }
+  8%          { opacity: 1; top: -72px; }
+  22%         { top: -72px; }
+  45%         { top: 12px; }
+  62%         { top: 12px; opacity: 1; }
+  74%         { top: -72px; opacity: 0; }
+  100%        { top: -72px; opacity: 0; }
+}
+
+/* Cabo dourado — âmbar metálico */
+.fileHandle {
+  width: 9px;
+  height: 24px;
+  background: linear-gradient(
+    90deg,
+    #906010 0%,
+    #C88820 25%,
+    #E8B840 50%,
+    #C88820 75%,
+    #906010 100%
+  );
+  border-radius: 3px 3px 1px 1px;
+  box-shadow: 1px 1px 5px rgba(44, 62, 74, 0.35);
+}
+
+/* Batente de borracha azul — indicador de profundidade */
+.fileStop {
+  width: 16px;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    #0E3A7A 0%,
+    #1A5CC8 30%,
+    #2874E8 50%,
+    #1A5CC8 70%,
+    #0E3A7A 100%
+  );
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  margin-top: 1px;
+}
+
+/* Haste metálica torcida — ponta de corte NiTi */
+.fileTip {
+  width: 4px;
+  height: 34px;
+  background: linear-gradient(
+    90deg,
+    #7A8A98 0%,
+    #BCC8D0 35%,
+    #DCEAF0 50%,
+    #A8B8C4 65%,
+    #7A8A98 100%
+  );
+  border-radius: 1px 1px 2px 2px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 1px;
+}
+
+.fileTip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    -40deg,
+    transparent 0px,
+    transparent 2px,
+    rgba(255, 255, 255, 0.28) 2px,
+    rgba(255, 255, 255, 0.28) 3px
+  );
+}
+
 /* ── Acessibilidade ── */
 @media (prefers-reduced-motion: reduce) {
   .inflammation { animation: none; opacity: 0.15; }
@@ -359,6 +447,7 @@
   .healGlow,
   .reliefStar,
   .painFace,
-  .reliefFace { animation: none; opacity: 0; }
+  .reliefFace,
+  .rotaryFile { animation: none; opacity: 0; }
   .cleanLight { height: 80px; opacity: 0.4; }
 }

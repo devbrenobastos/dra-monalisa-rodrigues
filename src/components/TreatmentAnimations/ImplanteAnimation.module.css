@@ -72,9 +72,9 @@
   );
   border-radius: 7px 7px 4px 4px;
   box-shadow:
-    3px 0 6px rgba(42, 36, 38, 0.1),
+    3px 0 6px rgba(44, 62, 74, 0.1),
     inset -1px 0 3px rgba(255, 255, 255, 0.9),
-    0 -2px 4px rgba(42, 36, 38, 0.08);
+    0 -2px 4px rgba(44, 62, 74, 0.08);
   position: relative;
   flex-shrink: 0;
 }
@@ -171,7 +171,7 @@
   border-radius: 7px 7px 3px 3px;
   border: 1.5px solid rgba(200, 152, 64, 0.5);
   box-shadow:
-    2px 0 5px rgba(42, 36, 38, 0.1),
+    2px 0 5px rgba(44, 62, 74, 0.1),
     inset -1px 0 3px rgba(255, 255, 255, 0.7);
   position: relative;
 }

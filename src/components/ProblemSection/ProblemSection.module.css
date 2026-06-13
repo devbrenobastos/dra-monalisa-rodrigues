@@ -59,7 +59,7 @@
 }
 
 .storyImpact {
-  font-family: var(--font-display);  /* Fraunces — muda a voz */
+  font-family: var(--font-display);
   font-style: italic;
   font-size: 1.375rem;               /* 22px — maior, destaque */
   font-weight: 400;

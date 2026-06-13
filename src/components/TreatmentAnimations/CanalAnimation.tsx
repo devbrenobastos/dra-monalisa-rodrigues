@@ -33,6 +33,14 @@ export function CanalAnimation() {
 
         {/* Dente 3D */}
         <div className={styles.toothWrap}>
+
+          {/* Lima rotatória NiTi — gold handle + blue stop + metallic tip */}
+          <div className={styles.rotaryFile}>
+            <div className={styles.fileHandle} />
+            <div className={styles.fileStop} />
+            <div className={styles.fileTip} />
+          </div>
+
           <div className={styles.tooth3d}>
             <div className={styles.toothTop} />
             <div className={styles.toothFace}>
