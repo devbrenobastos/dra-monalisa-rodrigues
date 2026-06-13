@@ -72,7 +72,8 @@
 }
 
 .fearsBlock {
-  background: var(--rose-wash);
+  background: var(--bg-surface);
+  border: 1px solid var(--mist);
   border-radius: var(--radius-lg);   /* 24px */
   padding: 28px 32px;
   margin: 32px auto;                 /* espaço acima e abaixo, centralizado */
@@ -93,7 +94,7 @@
 
 .fearIcon {
   font-size: 1.125rem;               /* 18px — não maior */
-  color: var(--rose-cta);
+  color: var(--text-secondary);
   line-height: 1;
 }
 

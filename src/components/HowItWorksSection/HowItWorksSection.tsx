@@ -27,14 +27,14 @@ function AnimatedArrow() {
           {/* Linha da seta */}
           <line
             x1="0" y1="8" x2="20" y2="8"
-            stroke="var(--rose)"
+            stroke="var(--text-secondary)"
             strokeWidth="1.5"
             strokeLinecap="round"
           />
           {/* Ponta da seta */}
           <polyline
             points="13,2 20,8 13,14"
-            stroke="var(--rose)"
+            stroke="var(--text-secondary)"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -43,10 +43,10 @@ function AnimatedArrow() {
           {/* Segundo traço paralelo — detalhe editorial */}
           <line
             x1="0" y1="8" x2="6" y2="8"
-            stroke="var(--rose-cta)"
+            stroke="var(--text-secondary)"
             strokeWidth="1.5"
             strokeLinecap="round"
-            opacity="0.4"
+            opacity="0.3"
           />
         </svg>
       </motion.div>
@@ -58,7 +58,7 @@ export const HowItWorksSection: React.FC = () => {
   const steps = [
     {
       number: '01',
-      title: 'Agende sua avaliação gratuita',
+      title: 'Agende sua avaliação',
       text: 'Você conta o que está sentindo. A gente escuta, examina e explica tudo, sem julgamento e sem pressa.',
     },
     {

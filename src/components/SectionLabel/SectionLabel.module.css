@@ -1,9 +1,9 @@
-﻿.label {
+.label {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--rose-wash);
-  border: 1px solid rgba(192, 144, 184, 0.25);
+  background: rgba(90, 84, 104, 0.06);
+  border: 1px solid rgba(90, 84, 104, 0.15);
   border-radius: var(--radius-pill);
   padding: 5px 14px 5px 10px;
   margin-bottom: 12px;
@@ -13,7 +13,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--rose-cta);
+  background: var(--text-secondary);
   flex-shrink: 0;
   animation: pulse-dot 2s ease-in-out infinite;
 }
@@ -29,17 +29,17 @@
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-wider);
   text-transform: uppercase;
-  color: var(--rose-cta);
+  color: var(--text-secondary);
   line-height: var(--leading-normal);
 }
 
 /* Dark mode overrides (for sections on navy bg) */
 .label.dark {
-  background: rgba(192, 144, 184, 0.12);
-  border-color: rgba(192, 144, 184, 0.25);
+  background: rgba(247, 244, 248, 0.08);
+  border-color: rgba(247, 244, 248, 0.15);
 }
-.label.dark .dot  { background: var(--rose); }
-.label.dark .text { color: var(--rose); }
+.label.dark .dot  { background: var(--text-on-dark); }
+.label.dark .text { color: var(--text-on-dark); }
 
 @media (max-width: 767px) {
   .label {

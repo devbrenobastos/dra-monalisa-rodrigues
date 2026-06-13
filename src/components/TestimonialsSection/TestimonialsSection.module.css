@@ -155,9 +155,9 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--rose-wash);
-  border: 1px solid rgba(198, 128, 144, 0.25);
-  color: var(--rose-cta);
+  background: var(--bg-surface);
+  border: 1px solid var(--mist);
+  color: var(--text-primary);
   font-family: var(--font-display);
   font-size: 0.875rem;
   font-weight: 400;
@@ -215,8 +215,8 @@
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  color: var(--rose-cta);
-  opacity: 0.7;
+  color: var(--text-secondary);
+  opacity: 0.85;
   margin: 0;
   text-transform: uppercase;
 }

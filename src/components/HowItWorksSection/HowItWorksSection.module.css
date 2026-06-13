@@ -94,8 +94,8 @@
   font-size: 7rem;       /* 112px — grande, decorativo */
   font-weight: 400;
   line-height: 1;
-  color: var(--rose);
-  opacity: 0.08;
+  color: var(--text-secondary);
+  opacity: 0.04;
   pointer-events: none;
   user-select: none;
   letter-spacing: -0.04em;
