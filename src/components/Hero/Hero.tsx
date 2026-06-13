@@ -3,6 +3,7 @@ import styles from './Hero.module.css';
 import { motion } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 import { fadeUp, scaleIn } from '../../animations/variants';
+import heroBoutique from '../../assets/hero-boutique.webp';
 
 export const Hero: React.FC = () => {
   return (
@@ -82,24 +83,15 @@ export const Hero: React.FC = () => {
           >
             {/* Editorial placeholder representing doctors' office */}
             <div className={styles.photoPlaceholder} role="img" aria-label="Casal de Doutores no consultório boutique em Vinhedo">
-              <svg viewBox="0 0 400 500" className={styles.placeholderSvg}>
-                <defs>
-                  <linearGradient id="officeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#EDD8E8" />
-                    <stop offset="100%" stopColor="#C090B8" stopOpacity="0.4" />
-                  </linearGradient>
-                </defs>
-                <rect width="100%" height="100%" fill="url(#officeGrad)" />
-                <g transform="translate(100, 150)" fill="#7A3D72" opacity="0.8">
-                  <path d="M100 80 A 45 45 0 1 0 100 170 A 45 45 0 1 0 100 80 Z" />
-                  <path d="M50 200 C 50 160, 150 160, 150 200 Z" />
-                </g>
-                <g transform="translate(200, 190)" fill="#5A5468" opacity="0.8">
-                  <path d="M50 40 A 35 35 0 1 0 50 110 A 35 35 0 1 0 50 40 Z" />
-                  <path d="M10 140 C 10 110, 90 110, 90 140 Z" />
-                </g>
-              </svg>
-              <div className={styles.photoCaption}>Consultório Boutique Vinhedo</div>
+              <img 
+                src={heroBoutique} 
+                alt="Casal de Doutores no consultório boutique em Vinhedo" 
+                className={styles.heroImage} 
+                width="900" 
+                height="1125" 
+                fetchPriority="high" 
+                decoding="async" 
+              />
             </div>
 
             {/* Floating badge */}
@@ -114,8 +106,21 @@ export const Hero: React.FC = () => {
                 delay: 0.7 
               }}
             >
-              <span className={styles.stars}>★★★★★</span>
-              <span className={styles.badgeText}>"Mais de 2.000 casos realizados"</span>
+              <motion.div
+                animate={{ 
+                  y: [0, -6, 0],
+                  x: [0, 4, 0] 
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'center', textAlign: 'center' }}
+              >
+                <span className={styles.stars}>★★★★★</span>
+                <span className={styles.badgeText}>"Mais de 2.000 atendimentos realizados"</span>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
