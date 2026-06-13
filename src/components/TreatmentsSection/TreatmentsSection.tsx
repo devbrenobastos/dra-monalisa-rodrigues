@@ -33,7 +33,7 @@ export const TreatmentsSection: React.FC = () => {
             </div>
             
             <div className={styles.content}>
-              <span className={styles.cardEyebrow}>Implante Dentário</span>
+              <span className={styles.cardEyebrow}>DR. RAFAEL CIDRAL · IMPLANTE</span>
               <h3 className={styles.cardTitle}>Volte a comer, sorrir e conversar com <em>confiança.</em></h3>
               <p className={styles.cardDescription}>
                 Implante não é cirurgia de risco. É um procedimento
@@ -85,7 +85,7 @@ export const TreatmentsSection: React.FC = () => {
             </div>
             
             <div className={styles.content}>
-              <span className={styles.cardEyebrow}>Tratamento de Canal</span>
+              <span className={styles.cardEyebrow}>DRA. MONALISA · ENDODONTIA</span>
               <h3 className={styles.cardTitle}>Acabe com a dor sem precisar <em>perder o dente.</em></h3>
               <p className={styles.cardDescription}>
                 A anestesia moderna elimina a dor. O procedimento é

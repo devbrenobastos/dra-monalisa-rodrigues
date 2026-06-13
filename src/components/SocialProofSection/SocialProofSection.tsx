@@ -10,7 +10,7 @@ export const SocialProofSection: React.FC = () => {
 
         {/* SectionLabel */}
         <div className={styles.labelWrapper}>
-          <SectionLabel>O que nossos pacientes viveram</SectionLabel>
+          <SectionLabel>Todos os pacientes. Nota 5,0.</SectionLabel>
         </div>
 
         {/* Headline principal */}
@@ -31,16 +31,16 @@ export const SocialProofSection: React.FC = () => {
           >
             2.000
           </motion.span>
-          {' '}pacientes.
-          <br />O mesmo cuidado
-          <br />em <em>cada um</em>.
+          {' '}casos.
+          <br />Nota 5,0.
+          <br />Pacientes <em>reais</em>.
         </motion.h2>
 
         {/* Sub */}
         <p className={styles.sub}>
-          A Dra. Monalisa Rodrigues tem mais de 2.000 tratamentos
-          endodônticos realizados — e 12 anos cuidando de pacientes
-          que chegaram com medo e saíram aliviados.
+          O Dr. Rafael realiza implantes e cirurgias com precisão e calma.
+          A Dra. Monalisa tem mais de 2.000 tratamentos de canal realizados
+          em 12 anos de experiência. Cada paciente avaliou com nota máxima.
         </p>
 
         {/* Grid de 3 depoimentos compactos */}
@@ -91,8 +91,9 @@ export const SocialProofSection: React.FC = () => {
 
         {/* CTA discreto */}
         <p className={styles.ctaLine}>
-          Avaliações verificadas no{' '}
-          <span className={styles.googleBadge}>Google</span>
+          <span className={styles.googleBadge}>
+            <span className={styles.googleStars}>★★★★★</span> Nota 5,0 — a maior nota possível no Google
+          </span>
         </p>
 
       </div>

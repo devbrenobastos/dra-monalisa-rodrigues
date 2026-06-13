@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
             initial="hidden"
             animate="visible"
           >
-            <SectionLabel>Vinhedo · Implante & Endodontia</SectionLabel>
+            <SectionLabel>Implante e endodontia em Vinhedo</SectionLabel>
           </motion.div>
 
           <h1 className={styles.headline}>
@@ -65,9 +65,8 @@ export const Hero: React.FC = () => {
               Tudo bem.<br />O importante é que você chegou até aqui.
             </strong>
             <br /><br />
-            Mais de 2.000 pacientes já passaram pelo mesmo medo
-            e descobriram que o tratamento era muito mais tranquilo
-            do que imaginavam.
+            Dois especialistas. Um cuida do seu canal, outro do seu implante.
+            Mais de 2.000 casos realizados e atendimento que respeita o seu tempo.
           </motion.p>
 
           <motion.div 
@@ -104,16 +103,16 @@ export const Hero: React.FC = () => {
               <svg viewBox="0 0 400 500" className={styles.placeholderSvg}>
                 <defs>
                   <linearGradient id="officeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#EADFD3" />
-                    <stop offset="100%" stopColor="#C68393" stopOpacity="0.4" />
+                    <stop offset="0%" stopColor="#EDD8E8" />
+                    <stop offset="100%" stopColor="#C090B8" stopOpacity="0.4" />
                   </linearGradient>
                 </defs>
                 <rect width="100%" height="100%" fill="url(#officeGrad)" />
-                <g transform="translate(100, 150)" fill="#7A3447" opacity="0.8">
+                <g transform="translate(100, 150)" fill="#7A3D72" opacity="0.8">
                   <path d="M100 80 A 45 45 0 1 0 100 170 A 45 45 0 1 0 100 80 Z" />
                   <path d="M50 200 C 50 160, 150 160, 150 200 Z" />
                 </g>
-                <g transform="translate(200, 190)" fill="#6E7A66" opacity="0.8">
+                <g transform="translate(200, 190)" fill="#5A5468" opacity="0.8">
                   <path d="M50 40 A 35 35 0 1 0 50 110 A 35 35 0 1 0 50 40 Z" />
                   <path d="M10 140 C 10 110, 90 110, 90 140 Z" />
                 </g>

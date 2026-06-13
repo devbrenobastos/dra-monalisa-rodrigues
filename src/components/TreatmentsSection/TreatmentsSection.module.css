@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   background-color: var(--bg-base);
   padding: 96px 0;
 }
@@ -83,7 +83,7 @@
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: var(--rose);
   padding: 8px 0 6px;
   opacity: 0.7;
   margin: 0;
@@ -121,7 +121,7 @@
 }
 
 .canalTagAlivio {
-  color: var(--sage);
+  color: var(--rose);
   animation: tagAlivioCycle 8s ease-in-out infinite;
 }
 
@@ -164,7 +164,7 @@
   position: absolute;
   top: 16px;
   left: 16px;
-  background: rgba(42, 36, 38, 0.65);
+  background: rgba(30, 27, 58, 0.65);
   color: var(--bg-surface);
   font-family: var(--font-body);
   font-size: 0.7rem;
@@ -241,7 +241,7 @@
 }
 
 .checkIcon {
-  color: var(--sage);
+  color: var(--rose);
   flex-shrink: 0;
   margin-top: 2px;
 }

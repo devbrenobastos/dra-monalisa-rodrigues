@@ -48,10 +48,11 @@
 
 .headline {
   font-family: var(--font-display);
-  font-size: clamp(1.625rem, 2.5vw, 2.125rem); /* Reduzido de 2.75rem para harmonizar */
+  font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 400;
-  line-height: 1.2;
-  color: var(--text-primary);   /* era --text-on-dark */
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text-primary);
   margin: 16px 0 20px;
   text-align: center;
   text-wrap: balance;
@@ -182,9 +183,23 @@
 }
 
 .googleBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--rose-wash);
+  border: 1px solid rgba(122, 61, 114, 0.2);
+  border-radius: var(--radius-pill);
+  padding: 6px 14px;
+  font-family: var(--font-body);
+  font-size: 0.8125rem;
+  font-weight: 500;
   color: var(--rose-cta);
-  font-weight: 600;
-  opacity: 1;
+}
+
+.googleStars {
+  color: var(--rose-cta);
+  letter-spacing: 1px;
+  font-size: 0.75rem;
 }
 
 @media (max-width: 767px) {
@@ -197,8 +212,8 @@
   }
 
   .headline {
-    font-size: clamp(1.625rem, 6vw, 2rem);
-    line-height: 1.15;
+    font-size: clamp(1.75rem, 6vw, 2.25rem);
+    line-height: 1.1;
     margin-bottom: 16px;
   }
 

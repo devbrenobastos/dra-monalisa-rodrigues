@@ -1,4 +1,4 @@
-.stage {
+﻿.stage {
   height: 240px;
   background: var(--bg-base);
   position: relative;
@@ -42,9 +42,9 @@
   );
   border-radius: 14px 14px 8px 8px;
   box-shadow:
-    5px 5px 18px rgba(44, 62, 74, 0.14),
+    5px 5px 18px rgba(30, 27, 58, 0.14),
     -3px -3px 10px rgba(255, 255, 255, 0.85),
-    inset -4px -4px 10px rgba(44, 62, 74, 0.05);
+    inset -4px -4px 10px rgba(30, 27, 58, 0.05);
   overflow: hidden;
 }
 
@@ -92,7 +92,7 @@
     #C0B49E 100%
   );
   border-radius: 4px 4px 10px 10px;
-  box-shadow: 2px 2px 8px rgba(44, 62, 74, 0.1);
+  box-shadow: 2px 2px 8px rgba(30, 27, 58, 0.1);
   position: relative;
   overflow: hidden;
 }
@@ -209,7 +209,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--sage);
+  background: var(--rose);
   animation: reliefPop 3.5s ease-in-out infinite;
   opacity: 0;
 }
@@ -388,7 +388,7 @@
     #906010 100%
   );
   border-radius: 3px 3px 1px 1px;
-  box-shadow: 1px 1px 5px rgba(44, 62, 74, 0.35);
+  box-shadow: 1px 1px 5px rgba(30, 27, 58, 0.35);
 }
 
 /* Batente de borracha azul — indicador de profundidade */

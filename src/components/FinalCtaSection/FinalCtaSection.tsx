@@ -30,7 +30,7 @@ export const FinalCtaSection: React.FC = () => {
             viewport={{ once: true, margin: "-80px" }}
             custom={1}
           >
-            Se você chegou até aqui, por favor, já sabe que precisa <em>cuidar disso.</em>
+            Se você chegou até aqui, já deu o <em>primeiro passo.</em>
           </motion.h2>
 
           <div className={styles.bodyText}>
@@ -41,19 +41,9 @@ export const FinalCtaSection: React.FC = () => {
               viewport={{ once: true, margin: "-80px" }}
               custom={2}
             >
-              A única pergunta é: vai resolver agora ou continuar
-              convivendo com esse problema por mais alguns meses?
-            </motion.p>
-            <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
-              custom={3}
-            >
-              Nossa consulta é objetiva. Sem enrolação.
-              Só uma conversa para entender o seu caso
-              e traçar o melhor caminho.
+              O Dr. Rafael e a Dra. Monalisa estão prontos para te atender.
+              Sem enrolação, sem julgamento.
+              Só uma conversa para entender o seu caso e traçar o melhor caminho.
             </motion.p>
           </div>
 

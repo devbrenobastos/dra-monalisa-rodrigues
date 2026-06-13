@@ -3,7 +3,22 @@
   color: var(--text-on-dark);
   padding: 96px 0;
   position: relative;
-  overflow: hidden;
+  overflow: hidden; /* impede watermark de vazar */
+}
+
+/* Warm gradient bridge — suaviza a entrada da seção escura */
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 100px;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 244, 248, 0.07) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 0;
 }
 
 @media (max-width: 767px) {
@@ -15,15 +30,17 @@
 .watermark {
   position: absolute;
   font-family: var(--font-display);
-  font-size: clamp(8rem, 15vw, 14rem);
-  color: var(--rose);
-  opacity: 0.07;
-  bottom: -20px;
-  right: -20px;
+  font-size: clamp(7rem, 18vw, 13rem);
+  font-weight: 400;
   line-height: 1;
+  color: var(--text-on-dark);
+  opacity: 0.007; /* quase transparente, detalhe extremamente sutil */
+  letter-spacing: -0.04em;
+  bottom: -24px;
+  right: -16px;
   pointer-events: none;
   user-select: none;
-  z-index: 1;
+  z-index: 0; /* atrás de tudo */
 }
 
 .container {
@@ -42,6 +59,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
 .eyebrow {
@@ -56,13 +75,13 @@
 
 .title {
   font-family: var(--font-display);
-  font-size: var(--text-2xl); /* 36px — seção protagonista */
+  font-size: clamp(2.25rem, 3.5vw, 2.875rem);
   color: var(--text-on-dark);
   font-weight: var(--weight-regular);
-  line-height: var(--leading-snug);
-  letter-spacing: var(--tracking-tight);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
   margin-bottom: 16px;
-  max-width: 440px;
+  max-width: 460px;
 }
 
 .title em {
@@ -87,36 +106,65 @@
   max-width: 480px;
 }
 
-.bullets {
+.doctorsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+  margin: 24px 0 28px;
+}
+
+@media (max-width: 600px) {
+  .doctorsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+.doctorName {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rose-cta);
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(122, 61, 114, 0.25);
+}
+
+.bulletList {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 40px;
+  gap: 8px;
 }
 
-.bullets li {
+.bulletItem {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 10px;
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: 0.9rem;
   color: var(--text-on-dark);
+  line-height: 1.5;
+  opacity: 0.85;
 }
 
-.bulletIcon {
-  width: 8px;
-  height: 8px;
+.bulletDot {
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
-  background-color: var(--amber);
+  background: var(--rose-cta);
   flex-shrink: 0;
-  display: inline-block;
+  margin-top: 6px;
 }
 
 .ctaButton {
   background: transparent;
   color: var(--text-on-dark);
-  border: 1.5px solid rgba(246, 241, 234, 0.3);
+  border: 1.5px solid rgba(247, 244, 248, 0.3);
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 1.0625rem;
@@ -134,7 +182,7 @@
 
 .ctaButton:hover {
   border-color: var(--text-on-dark);
-  background: rgba(246, 241, 234, 0.05);
+  background: rgba(247, 244, 248, 0.05);
 }
 
 .imageCol {
@@ -143,6 +191,8 @@
   align-items: stretch;
   min-height: 480px;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 .photoContainer {
@@ -165,7 +215,7 @@
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(42, 36, 38, 0.85);
+  background: rgba(30, 27, 58, 0.85);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--text-on-dark);

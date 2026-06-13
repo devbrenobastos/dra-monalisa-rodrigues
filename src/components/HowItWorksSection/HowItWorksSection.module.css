@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   padding: 112px 0;
   background: var(--bg-base);
 }
@@ -28,10 +28,10 @@
 
 .sectionTitle {
   font-family: var(--font-display);
-  font-size: var(--text-xl);         /* 30px */
+  font-size: clamp(1.875rem, 3vw, 2.375rem);
   font-weight: var(--weight-regular);
-  line-height: var(--leading-snug);  /* 1.2 */
-  letter-spacing: var(--tracking-tight);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
   color: var(--text-primary);
   margin-top: 0;
   margin-bottom: 16px;
@@ -59,8 +59,8 @@
   border-radius: 20px;
   padding: 36px 32px 32px;
   overflow: hidden;
-  box-shadow: 0 2px 24px rgba(42, 36, 38, 0.055),
-              0 1px 4px  rgba(42, 36, 38, 0.04);
+  box-shadow: 0 2px 24px rgba(30, 27, 58, 0.055),
+              0 1px 4px  rgba(30, 27, 58, 0.04);
   border: 1px solid rgba(222, 214, 204, 0.7);
   transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
               box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
@@ -72,8 +72,8 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(42, 36, 38, 0.10),
-              0 2px 8px  rgba(42, 36, 38, 0.05);
+  box-shadow: 0 12px 40px rgba(30, 27, 58, 0.10),
+              0 2px 8px  rgba(30, 27, 58, 0.05);
 }
 
 /* Linha superior colorida — assinatura do card */
@@ -82,7 +82,7 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--rose) 0%, var(--amber) 100%);
+  background: linear-gradient(90deg, var(--rose-cta) 0%, var(--rose) 100%);
   border-radius: 20px 20px 0 0;
 }
 

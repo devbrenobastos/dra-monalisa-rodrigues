@@ -2,37 +2,29 @@
 
 :root {
   /* ── Fundos ── */
-  --bg-base: #F4F0EA;
-  --bg-surface: #FAFAF6;
+  --bg-base:    #F7F4F8;
+  --bg-surface: #FDFCFE;
 
-  /* ── Seções escuras: slate ── */
-  --bg-deep: #2C3E4A;
+  /* ── Seções escuras: violeta profundo ── */
+  --bg-deep: #1E1B3A;
 
   /* ── Névoa/bordas ── */
-  --mist: #D8D2C8;
+  --mist: #D8D0DC;
 
   /* ── Texto ── */
-  --text-primary: #2C3E4A;
-  --text-secondary: #5A6670;
-  --text-on-dark: #F4F0EA;
+  --text-primary:   #1E1B3A;
+  --text-secondary: #5A5468;
+  --text-on-dark:   #F7F4F8;
 
-  /* ── Rosé ── */
-  --rose-wash: #EED8DC;
-  --rose: #C08090;
-  --rose-cta: #8E3D52;
-  --rose-deep: #6E2D40;
-
-  /* ── Âmbar ── */
-  --amber: #D4A84A;
-  --amber-light: #E4BC6A;
-  --amber-wash: #F6EDD6;
-
-  /* ── Sage ── */
-  --sage: #5C6C60;
+  /* ── Lilás ── */
+  --rose-wash: #EDD8E8;
+  --rose:      #C090B8;
+  --rose-cta:  #7A3D72;
+  --rose-deep: #5C2A56;
 
   /* ── Fontes ── */
   --font-display: 'Libre Baskerville', Georgia, serif;
-  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
 
   /* ============================================
      ESCALA TIPOGRÁFICA — RATIO 1.25 (Major Third)
@@ -46,7 +38,7 @@
   --text-xl:   1.875rem;
   --text-2xl:  2.25rem;
   --text-3xl:  2.75rem;
-  --text-4xl:  clamp(2.75rem, 4.5vw, 3.5rem);
+  --text-4xl:  clamp(2.25rem, 3.5vw, 3rem);
 
   /* Pesos */
   --weight-regular: 400;
@@ -54,26 +46,26 @@
   --weight-semibold: 600;
 
   /* Line-heights */
-  --leading-tight:   1.05;
+  --leading-tight:   1.1;
   --leading-snug:    1.2;
   --leading-normal:  1.5;
   --leading-relaxed: 1.7;
   --leading-loose:   1.8;
 
   /* Letter-spacing */
-  --tracking-tight:  -0.01em;
+  --tracking-tight:  -0.025em;
   --tracking-normal:  0;
   --tracking-wide:    0.08em;
   --tracking-wider:   0.12em;
 
-  --radius-sm: 8px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
+  --radius-sm:   8px;
+  --radius-md:   16px;
+  --radius-lg:   24px;
   --radius-pill: 999px;
 
-  --shadow-soft: 0 4px 24px rgba(44, 62, 74, 0.08);
-  --shadow-card: 0 2px 16px rgba(44, 62, 74, 0.06);
-  --shadow-sm:   0 2px 8px  rgba(44, 62, 74, 0.04);
+  --shadow-soft: 0 4px 24px rgba(30, 27, 58, 0.09);
+  --shadow-card: 0 2px 16px rgba(30, 27, 58, 0.06);
+  --shadow-sm:   0 2px 8px  rgba(30, 27, 58, 0.04);
 }
 
 /* Reset and base styling */
@@ -103,7 +95,7 @@ html {
 }
 
 ::selection {
-  background: var(--amber-wash);
+  background: var(--rose-wash);
   color: var(--rose-deep);
 }
 
@@ -133,6 +125,10 @@ h1, h2, h3, h4 {
   color: var(--text-primary);
   font-weight: 400;
 }
+
+h1 { letter-spacing: -0.03em; }
+h2 { letter-spacing: -0.025em; }
+h3 { letter-spacing: -0.015em; }
 
 h1, h2, h3, p {
   text-wrap: pretty;

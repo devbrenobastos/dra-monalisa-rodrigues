@@ -9,22 +9,23 @@ export const CredentialsBar: React.FC = () => {
     {
       icon: <Award className={styles.icon} size={24} />,
       number: '2.000+',
-      label: 'casos de canal'
+      label: 'Casos de canal'
     },
     {
       icon: <Star className={styles.icon} size={24} />,
-      number: '★★★★★',
-      label: 'Google Reviews'
+      number: 'Nota 5,0 ★',
+      label: 'no Google',
+      isGoogle: true
     },
     {
       icon: <CheckCircle className={styles.icon} size={24} />,
-      number: '+12 anos',
-      label: 'de experiência'
+      number: 'Dr. Rafael',
+      label: 'Implante & Perio'
     },
     {
       icon: <Heart className={styles.icon} size={24} />,
-      number: '2 especialistas',
-      label: 'no mesmo consultório'
+      number: 'Dra. Monalisa',
+      label: 'Endodontia'
     }
   ];
 
@@ -48,7 +49,15 @@ export const CredentialsBar: React.FC = () => {
               {item.icon}
             </div>
             <div className={styles.textContainer}>
-              <span className={styles.number}>{item.number}</span>
+              <span className={styles.number}>
+                {item.isGoogle ? (
+                  <>
+                    Nota 5,0 <span className={styles.coloredStar}>★</span>
+                  </>
+                ) : (
+                  item.number
+                )}
+              </span>
               <span className={styles.label}>{item.label}</span>
             </div>
           </motion.div>

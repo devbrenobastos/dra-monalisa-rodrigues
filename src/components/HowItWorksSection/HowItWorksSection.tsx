@@ -81,7 +81,7 @@ export const HowItWorksSection: React.FC = () => {
         <div className={styles.header}>
           <SectionLabel>Como funciona</SectionLabel>
           <h2 className={styles.sectionTitle}>
-            Três passos. <em>Sem complicação.</em>
+            Como funciona. <em>Três passos.</em>
           </h2>
         </div>
 

@@ -2,36 +2,19 @@ import React from 'react';
 import styles from './AboutSection.module.css';
 import { motion } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
-import { slideLeft, slideRight, fadeIn, staggerContainer } from '../../animations/variants';
+import { slideLeft, slideRight } from '../../animations/variants';
 
 export const AboutSection: React.FC = () => {
-  const rafaelBullets = [
-    "Periodontista e Implantodontista",
-    "Professor Assistente — Cirurgia e Implante, Instituto Mestris",
-    "Vinhedo e região de Campinas"
-  ];
-
-  const monalisaBullets = [
-    "Endodontista com mais de 2.000 casos realizados",
-    "Mais de 12 anos de experiência clínica",
-    "Especialista em tratamento de canal sem dor"
-  ];
-
-  const bulletItemVariants = {
-    hidden: { opacity: 0, x: -10 },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      transition: { duration: 0.3 }
-    }
-  };
 
   return (
     <section className={styles.section} id="sobre-nos">
-      {/* Decorative large watermark text "2.000+" at 15% opacity */}
+      {/* Decorative large watermark text "2.000+" at a very subtle max opacity */}
       <motion.div 
         className={styles.watermark}
-        variants={fadeIn}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 0.007 }
+        }}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
@@ -50,43 +33,52 @@ export const AboutSection: React.FC = () => {
         >
           <SectionLabel dark>Quem somos</SectionLabel>
           <h2 className={styles.title}>
-            Uma família cuidando da&nbsp;sua.
+            Dois especialistas. Um consultório. Cuidado do início ao fim.
           </h2>
           
           <div className={styles.bodyText}>
             <p>
-              Somos um casal de especialistas — e isso muda tudo.
+              O Dr. Rafael cuida do seu implante e da sua gengiva.
+              A Dra. Monalisa cuida do seu canal e do seu dente.
+              Juntos, cuidam de você — do primeiro contato ao fim do tratamento,
+              sem rotatividade, sem surpresas.
             </p>
             <p>
-              O Dr. Rafael Cidral é periodontista e implantodontista, professor
-              assistente do curso de Cirurgia e Implante do Instituto Mestris.
-              A Dra. Monalisa Rodrigues é endodontista com mais de 2.000 casos
-              realizados e 12 anos de experiência clínica dedicados ao tratamento
-              de canal sem dor.
-            </p>
-            <p>
-              Aqui você é atendido pelos mesmos profissionais do início ao fim.
-              Sem rotatividade. Sem surpresas.
+              Construímos nosso atendimento em Vinhedo com um propósito simples:
+              oferecer o cuidado que gostaríamos de receber.
+              Com tempo, escuta e respeito pelo que você sente.
             </p>
           </div>
 
-          <motion.ul
-            className={styles.bullets}
-            variants={staggerContainer}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-          >
-            {[...rafaelBullets, ...monalisaBullets].map((bullet, idx) => (
-              <motion.li
-                key={idx}
-                variants={bulletItemVariants}
-              >
-                <span className={styles.bulletIcon} />
-                <span>{bullet}</span>
-              </motion.li>
-            ))}
-          </motion.ul>
+          <div className={styles.doctorsGrid}>
+            <div className={styles.doctorBlock}>
+              <p className={styles.doctorName}>Dr. Rafael Cidral</p>
+              <ul className={styles.bulletList}>
+                <li className={styles.bulletItem}>
+                  <span className={styles.bulletDot} />
+                  Periodontista e Implantodontista
+                </li>
+                <li className={styles.bulletItem}>
+                  <span className={styles.bulletDot} />
+                  Professor Assistente de Cirurgia e Implante — Instituto Mestris
+                </li>
+              </ul>
+            </div>
+
+            <div className={styles.doctorBlock}>
+              <p className={styles.doctorName}>Dra. Monalisa Rodrigues</p>
+              <ul className={styles.bulletList}>
+                <li className={styles.bulletItem}>
+                  <span className={styles.bulletDot} />
+                  Endodontista — mais de 2.000 casos realizados
+                </li>
+                <li className={styles.bulletItem}>
+                  <span className={styles.bulletDot} />
+                  Mais de 12 anos de experiência clínica
+                </li>
+              </ul>
+            </div>
+          </div>
 
           <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
             Conhecer o consultório
@@ -105,9 +97,9 @@ export const AboutSection: React.FC = () => {
             <svg viewBox="0 0 400 500" className={styles.doctorsPhoto} role="img" aria-label="Foto do casal de dentistas especializados no consultório em Vinhedo">
               <defs>
                 <linearGradient id="warmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stopColor="#2A2426" />
-                  <stop offset="50%" stopColor="#7A3447" />
-                  <stop offset="100%" stopColor="#C68393" />
+                  <stop offset="0%" stopColor="#1E1B3A" />
+                  <stop offset="50%" stopColor="#7A3D72" />
+                  <stop offset="100%" stopColor="#C090B8" />
                 </linearGradient>
               </defs>
               <rect width="100%" height="100%" fill="url(#warmGrad)" />

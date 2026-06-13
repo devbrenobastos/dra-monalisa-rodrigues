@@ -60,18 +60,18 @@ const testimonials = [
     quote: "Simplesmente demais. Ambiente acolhedor, agradável, profissionalismo nota 10, extremamente competente e o mais importante: comunicativo, transparente e tira todas as suas dúvidas. Apaixonado pelo que faz."
   },
   {
-    initials: "RF",
-    name: "Rafael Cidral",
+    initials: "HP",
+    name: "Heloisa Rossini",
     city: "Vinhedo",
-    doctor: "Dra. Monalisa Rodrigues",
+    doctor: "Dra. Monalisa & Dr. Rafael",
     rating: 5,
-    quote: "Difícil confiar num profissional que faz endodontia. Ela passa muita segurança, mostra muita tranquilidade e passa segurança no tratamento proposto. Com certeza indicarei para outras pessoas!"
+    quote: "Dr. Rafael e Dra. Monalisa são muito atenciosos e cuidadosos com seus pacientes. Realizei retirada dos sisos com Dr. Rafael — excelente profissional, não senti dor e tive pós muito tranquilo. Agradeço muito por ter conhecido eles."
   }
 ];
 
 const metrics = [
   { value: "5,0 ★", label: "Média Google" },
-  { value: "50+",   label: "Avaliações verificadas" },
+  { value: "50+",   label: "Avaliações reais" },
   { value: "2.000+", label: "Casos de canal" },
 ];
 
@@ -122,15 +122,15 @@ export function TestimonialsSection() {
 
         {/* COLUNA ESQUERDA — sticky */}
         <div className={styles.leftCol}>
-          <SectionLabel>O que dizem nossos pacientes</SectionLabel>
+          <SectionLabel>Quem já passou por aqui</SectionLabel>
 
           <h2 className={styles.headline}>
             Em palavras <em>deles</em>.
           </h2>
 
           <p className={styles.sub}>
-            Mais de 50 avaliações verificadas no Google.
-            Todos os pacientes. Média&nbsp;5,0.
+            Mais de 50 pessoas que tinham medo, dúvidas ou esperavam há meses.
+            Todas avaliaram com nota máxima.
           </p>
 
           <div className={styles.metricsGrid}>
@@ -144,7 +144,7 @@ export function TestimonialsSection() {
 
           <div className={styles.googleBadge}>
             <span className={styles.googleDot} />
-            <span>Avaliações verificadas no Google</span>
+            <span>Avaliações reais no Google Meu Negócio</span>
           </div>
         </div>
 

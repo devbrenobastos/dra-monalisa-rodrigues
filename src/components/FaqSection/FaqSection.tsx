@@ -63,7 +63,7 @@ export const FaqSection: React.FC = () => {
   const faqs = [
     {
       q: "Vocês atendem por plano odontológico?",
-      a: "Trabalhamos principalmente com pacientes particulares. Para convênios, atendemos exclusivamente pelo plano Uniodonto. Entre em contato para verificar sua cobertura."
+      a: "Nosso foco é no atendimento particular, onde podemos dedicar tempo e recursos ideais para cada caso. Para convênios, atendemos exclusivamente pelo plano Uniodonto — entre em contato para verificar sua cobertura."
     },
     {
       q: "Tratamento de canal dói?",

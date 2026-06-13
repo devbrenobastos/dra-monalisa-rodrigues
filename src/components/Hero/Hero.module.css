@@ -1,4 +1,4 @@
-.hero {
+﻿.hero {
   position: relative;
   background-color: var(--bg-base);
   padding-top: 120px;  /* compensar navbar */
@@ -57,10 +57,10 @@
 
 .headline {
   font-family: var(--font-display);
-  font-size: var(--text-4xl);        /* clamp(2.75rem, 4.5vw, 3.5rem) */
-  font-weight: var(--weight-regular); /* 400 */
-  line-height: 1.15;                 /* was 1.05, increased to prevent vertical squishing */
-  letter-spacing: var(--tracking-tight); /* -0.02em */
+  font-size: clamp(1.875rem, 3vw, 2.5rem); /* max 40px — cabe em 1 linha por span na col de 620px */
+  font-weight: var(--weight-regular);
+  line-height: 1.2;
+  letter-spacing: var(--tracking-tight);
   color: var(--text-primary);
   margin-bottom: 16px;
 }
@@ -100,7 +100,7 @@
   padding: 18px 36px;
   border-radius: var(--radius-pill);
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(151, 69, 90, 0.2);
+  box-shadow: 0 4px 14px rgba(122, 61, 114, 0.2);
   transition: all 0.25s ease;
   text-align: center;
   min-height: 48px;
@@ -115,7 +115,7 @@
 .ctaButton:hover {
   background: var(--rose-deep);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(151, 69, 90, 0.3);
+  box-shadow: 0 6px 20px rgba(122, 61, 114, 0.3);
 }
 
 .microCopy {
@@ -176,7 +176,7 @@
   position: absolute;
   bottom: 16px;
   right: 16px;
-  background: rgba(42, 36, 38, 0.75);
+  background: rgba(30, 27, 58, 0.75);
   color: var(--bg-surface);
   font-size: 0.75rem;
   padding: 6px 12px;
@@ -191,7 +191,7 @@
   background: var(--bg-surface);
   border-radius: 14px;
   padding: 16px 20px;
-  box-shadow: 0 10px 30px rgba(42, 36, 38, 0.08);
+  box-shadow: 0 10px 30px rgba(30, 27, 58, 0.08);
   display: flex;
   flex-direction: column;
   gap: 4px;
