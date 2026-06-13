@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-base:    #F7F4F8;
-  --bg-surface: #FDFCFE;
-  --bg-deep:    #1E1B3A;
-  --mist:       #D8D0DC;
-  --text-primary:   #1E1B3A;
-  --text-secondary: #5A5468;
-  --text-on-dark:   #F7F4F8;
-  --rose-wash: #EDD8E8;
-  --rose:      #C090B8;
-  --rose-cta:  #7A3D72;
-  --rose-deep: #5C2A56;
+  --bg-base:    #F4F6F9;
+  --bg-surface: #FFFFFF;
+  --bg-deep:    #121B2A;
+  --mist:       #D2D7DF;
+  --text-primary:   #1A2536;
+  --text-secondary: #4A5568;
+  --text-on-dark:   #FAFBFD;
+  --rose-wash: #EBF1FA;
+  --rose:      #C08293;
+  --rose-cta:  #1F3E76;
+  --rose-deep: #132952;
   --font-display: 'Libre Baskerville', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
   --radius-sm: 8px; --radius-md: 16px;
   --radius-lg: 24px; --radius-pill: 999px;
-  --shadow-soft: 0 4px 24px rgba(30,27,58,.09);
-  --shadow-card: 0 2px 16px rgba(30,27,58,.06);
+  --shadow-soft: 0 4px 24px rgba(26,37,54,.08);
+  --shadow-card: 0 2px 16px rgba(26,37,54,.04);
 }
 
 /* Reset and base styling */

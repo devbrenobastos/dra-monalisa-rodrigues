@@ -78,7 +78,7 @@
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2.5px;
-  background: linear-gradient(90deg, var(--rose-cta) 0%, var(--text-secondary) 100%);
+  background: linear-gradient(90deg, var(--rose-cta) 0%, var(--rose) 100%);
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
   z-index: 5;
 }

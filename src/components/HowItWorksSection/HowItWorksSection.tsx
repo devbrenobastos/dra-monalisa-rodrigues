@@ -27,14 +27,14 @@ function AnimatedArrow() {
           {/* Linha da seta */}
           <line
             x1="0" y1="8" x2="20" y2="8"
-            stroke="var(--text-secondary)"
+            stroke="var(--rose-cta)"
             strokeWidth="1.5"
             strokeLinecap="round"
           />
           {/* Ponta da seta */}
           <polyline
             points="13,2 20,8 13,14"
-            stroke="var(--text-secondary)"
+            stroke="var(--rose-cta)"
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -43,10 +43,10 @@ function AnimatedArrow() {
           {/* Segundo traço paralelo — detalhe editorial */}
           <line
             x1="0" y1="8" x2="6" y2="8"
-            stroke="var(--text-secondary)"
+            stroke="var(--rose)"
             strokeWidth="1.5"
             strokeLinecap="round"
-            opacity="0.3"
+            opacity="0.6"
           />
         </svg>
       </motion.div>
