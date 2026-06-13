@@ -108,7 +108,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background-color: var(--rose);
+  background-color: var(--amber);
   flex-shrink: 0;
   display: inline-block;
 }

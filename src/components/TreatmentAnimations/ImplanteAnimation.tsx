@@ -8,10 +8,18 @@ export function ImplanteAnimation() {
 
           {/* Fileira de dentes */}
           <div className={styles.teethRow}>
-            <div className={`${styles.tooth} ${styles.tMolar}`} />
-            <div className={`${styles.tooth} ${styles.tMolar}`} />
-            <div className={`${styles.tooth} ${styles.tPre}`} />
-            <div className={`${styles.tooth} ${styles.tCanine}`} />
+            <div className={`${styles.tooth} ${styles.tMolar}`}>
+              <div className={styles.toothRoot} />
+            </div>
+            <div className={`${styles.tooth} ${styles.tMolar}`}>
+              <div className={styles.toothRoot} />
+            </div>
+            <div className={`${styles.tooth} ${styles.tPre}`}>
+              <div className={styles.toothRoot} />
+            </div>
+            <div className={`${styles.tooth} ${styles.tCanine}`}>
+              <div className={styles.toothRoot} />
+            </div>
 
             {/* Espaço vazio — alvéolo */}
             <div className={styles.toothGap}>
@@ -19,16 +27,26 @@ export function ImplanteAnimation() {
               {/* Implante descendo */}
               <div className={styles.implantAnim}>
                 <div className={styles.implantCrown} />
+                <div className={styles.implantAbutment} />
+                <div className={styles.implantConnector} />
                 <div className={styles.implantRoot} />
               </div>
               {/* Halo de encaixe */}
               <div className={styles.implantHalo} />
             </div>
 
-            <div className={`${styles.tooth} ${styles.tCanine}`} />
-            <div className={`${styles.tooth} ${styles.tPre}`} />
-            <div className={`${styles.tooth} ${styles.tMolar}`} />
-            <div className={`${styles.tooth} ${styles.tMolar}`} />
+            <div className={`${styles.tooth} ${styles.tCanine}`}>
+              <div className={styles.toothRoot} />
+            </div>
+            <div className={`${styles.tooth} ${styles.tPre}`}>
+              <div className={styles.toothRoot} />
+            </div>
+            <div className={`${styles.tooth} ${styles.tMolar}`}>
+              <div className={styles.toothRoot} />
+            </div>
+            <div className={`${styles.tooth} ${styles.tMolar}`}>
+              <div className={styles.toothRoot} />
+            </div>
           </div>
 
           {/* Gengiva */}

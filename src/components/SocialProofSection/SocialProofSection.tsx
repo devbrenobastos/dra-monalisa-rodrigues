@@ -31,16 +31,16 @@ export const SocialProofSection: React.FC = () => {
           >
             2.000
           </motion.span>
-          {' '}pessoas chegaram
-          <br />aqui com medo.
-          <br />E saíram <em>aliviadas</em>.
+          {' '}pacientes.
+          <br />O mesmo cuidado
+          <br />em <em>cada um</em>.
         </motion.h2>
 
         {/* Sub */}
         <p className={styles.sub}>
-          Mais de 2.000 tratamentos de canal realizados com sucesso.
-          Pacientes que adiaram por anos e descobriram que era muito
-          mais tranquilo do que imaginavam.
+          A Dra. Monalisa Rodrigues tem mais de 2.000 tratamentos
+          endodônticos realizados — e 12 anos cuidando de pacientes
+          que chegaram com medo e saíram aliviados.
         </p>
 
         {/* Grid de 3 depoimentos compactos */}

@@ -78,12 +78,12 @@ export const Hero: React.FC = () => {
             animate="visible"
           >
             <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
-              Agendar minha avaliação gratuita
+              Agendar minha consulta
             </a>
             <div className={styles.microCopy}>
               <span>🔒 Conversa direta com a recepção</span>
               <span className={styles.separator}>·</span>
-              <span>💳 Uniodonto e parcelamento</span>
+              <span>💳 Parcelamos seu tratamento</span>
             </div>
             <div className={styles.locationLabel}>
               Atendemos em Vinhedo e região de Campinas

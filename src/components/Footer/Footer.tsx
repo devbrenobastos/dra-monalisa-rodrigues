@@ -7,9 +7,9 @@ export const Footer: React.FC = () => {
       <div className={styles.container}>
         {/* Col 1: Brand & Tagline */}
         <div className={styles.col}>
-          <span className={styles.logo}>Dra. Monalisa & Dr. Rafael</span>
+          <span className={styles.logo}>Dra. Monalisa Rodrigues & Dr. Rafael Cidral</span>
           <p className={styles.tagline}>
-            Especialistas em implante e endodontia em Vinhedo. 
+            Endodontia · Implantodontia · Periodontia em Vinhedo.
             Cuidado humanizado e individualizado para o seu sorriso.
           </p>
         </div>
@@ -31,8 +31,8 @@ export const Footer: React.FC = () => {
           <p className={styles.contactText}>
             📞 (19) 99999-9999<br />
             ✉️ contato@dramonalisa.com.br<br />
-            📍 Vinhedo, SP (Centro)<br />
-            Uniodonto credenciado · Atendimento particular
+            📍 Atendimento em Vinhedo e região de Campinas<br />
+            Consulte disponibilidade pelo WhatsApp.
           </p>
         </div>
       </div>

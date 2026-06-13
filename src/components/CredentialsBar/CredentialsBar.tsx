@@ -18,8 +18,8 @@ export const CredentialsBar: React.FC = () => {
     },
     {
       icon: <CheckCircle className={styles.icon} size={24} />,
-      number: 'Uniodonto',
-      label: 'credenciado'
+      number: '+12 anos',
+      label: 'de experiência'
     },
     {
       icon: <Heart className={styles.icon} size={24} />,

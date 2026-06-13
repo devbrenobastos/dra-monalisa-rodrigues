@@ -51,8 +51,9 @@ export const FinalCtaSection: React.FC = () => {
               viewport={{ once: true, margin: "-80px" }}
               custom={3}
             >
-              Nossa avaliação é gratuita. Sem compromisso. Sem pressão.
-              Só uma conversa para entender o seu caso.
+              Nossa consulta é objetiva. Sem enrolação.
+              Só uma conversa para entender o seu caso
+              e traçar o melhor caminho.
             </motion.p>
           </div>
 
@@ -78,15 +79,13 @@ export const FinalCtaSection: React.FC = () => {
                 ease: "easeInOut"
               }}
             >
-              Falar com a recepção agora, é gratuito
+              Falar com a recepção agora
             </motion.a>
             
             <div className={styles.microCopy}>
-              <span>💳 Uniodonto e parcelamento</span>
+              <span>💳 Parcelamos seu tratamento</span>
               <span className={styles.separator}>·</span>
-              <span>📍 Vinhedo</span>
-              <span className={styles.separator}>·</span>
-              <span>Região de Campinas</span>
+              <span>📍 Vinhedo e região de Campinas</span>
             </div>
             
             <a href="tel:+5519999999999" className={styles.phoneLabel}>

@@ -33,13 +33,13 @@
   line-height: var(--leading-normal);
 }
 
-/* Dark mode overrides (for sections on deep plum bg) */
+/* Dark mode overrides (for sections on navy bg) */
 .label.dark {
-  background: rgba(198, 131, 147, 0.12);
-  border-color: rgba(198, 131, 147, 0.2);
+  background: rgba(212, 168, 83, 0.1);
+  border-color: rgba(212, 168, 83, 0.3);
 }
-.label.dark .dot  { background: var(--rose); }
-.label.dark .text { color: var(--rose); }
+.label.dark .dot  { background: var(--amber-light); }
+.label.dark .text { color: var(--amber-light); }
 
 @media (max-width: 767px) {
   .label {

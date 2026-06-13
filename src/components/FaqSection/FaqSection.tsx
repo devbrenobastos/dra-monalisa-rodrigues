@@ -62,8 +62,8 @@ export const FaqSection: React.FC = () => {
 
   const faqs = [
     {
-      q: "Atende pelo plano Uniodonto?",
-      a: "Sim. Somos credenciados Uniodonto e atendemos com o mesmo cuidado e qualidade do atendimento particular. Você não abre mão de nada."
+      q: "Vocês atendem por plano odontológico?",
+      a: "Trabalhamos principalmente com pacientes particulares. Para convênios, atendemos exclusivamente pelo plano Uniodonto. Entre em contato para verificar sua cobertura."
     },
     {
       q: "Tratamento de canal dói?",
@@ -71,7 +71,7 @@ export const FaqSection: React.FC = () => {
     },
     {
       q: "Implante é caro? Tem parcelamento?",
-      a: "Oferecemos parcelamento para que o implante caiba no seu orçamento. Na avaliação gratuita você recebe um orçamento claro, sem surpresas."
+      a: "Oferecemos parcelamento para que o implante caiba no seu orçamento. Na consulta você recebe um orçamento claro, sem surpresas."
     },
     {
       q: "Quanto tempo leva o tratamento?",

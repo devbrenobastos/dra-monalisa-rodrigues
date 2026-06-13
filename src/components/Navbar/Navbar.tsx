@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
       >
         <div className={styles.container}>
           <a href="#" className={styles.logo}>
-            Dra. Monalisa & Dr. Rafael
+            Dra. Monalisa & Dr. Rafael Cidral
           </a>
 
           <div className={styles.desktopLinks}>
@@ -56,7 +56,7 @@ export const Navbar: React.FC = () => {
 
           <div className={styles.desktopCta}>
             <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
-              Agendar Avaliação
+              Agendar Consulta
             </a>
           </div>
 
@@ -103,7 +103,7 @@ export const Navbar: React.FC = () => {
                   className={styles.drawerCtaButton}
                   onClick={closeMenu}
                 >
-                  Agendar Avaliação
+                  Agendar Consulta
                 </a>
               </div>
             </div>

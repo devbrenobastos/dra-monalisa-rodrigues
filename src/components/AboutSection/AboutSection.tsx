@@ -5,10 +5,16 @@ import { SectionLabel } from '../SectionLabel/SectionLabel';
 import { slideLeft, slideRight, fadeIn, staggerContainer } from '../../animations/variants';
 
 export const AboutSection: React.FC = () => {
-  const bulletItems = [
-    "Especialização em Implante (Dr. Rafael)",
-    "Especialização em Endodontia (Dra. Monalisa)",
-    "Vinhedo, atendendo toda a região de Campinas"
+  const rafaelBullets = [
+    "Periodontista e Implantodontista",
+    "Professor Assistente — Cirurgia e Implante, Instituto Mestris",
+    "Vinhedo e região de Campinas"
+  ];
+
+  const monalisaBullets = [
+    "Endodontista com mais de 2.000 casos realizados",
+    "Mais de 12 anos de experiência clínica",
+    "Especialista em tratamento de canal sem dor"
   ];
 
   const bulletItemVariants = {
@@ -49,28 +55,30 @@ export const AboutSection: React.FC = () => {
           
           <div className={styles.bodyText}>
             <p>
-              Somos um casal de dentistas especializados, e isso muda tudo.
+              Somos um casal de especialistas — e isso muda tudo.
             </p>
             <p>
-              Aqui não tem rotatividade de profissionais. Você sabe exatamente
-              quem vai te atender do primeiro contato até o final do tratamento.
+              O Dr. Rafael Cidral é periodontista e implantodontista, professor
+              assistente do curso de Cirurgia e Implante do Instituto Mestris.
+              A Dra. Monalisa Rodrigues é endodontista com mais de 2.000 casos
+              realizados e 12 anos de experiência clínica dedicados ao tratamento
+              de canal sem dor.
             </p>
             <p>
-              Construímos nosso consultório em Vinhedo com um propósito simples:
-              oferecer o cuidado que gostaríamos de receber, com tempo, escuta
-              e respeito pelo que você sente.
+              Aqui você é atendido pelos mesmos profissionais do início ao fim.
+              Sem rotatividade. Sem surpresas.
             </p>
           </div>
 
-          <motion.ul 
+          <motion.ul
             className={styles.bullets}
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
           >
-            {bulletItems.map((bullet, idx) => (
-              <motion.li 
+            {[...rafaelBullets, ...monalisaBullets].map((bullet, idx) => (
+              <motion.li
                 key={idx}
                 variants={bulletItemVariants}
               >
@@ -116,7 +124,7 @@ export const AboutSection: React.FC = () => {
               <circle cx="200" cy="300" r="100" stroke="#F6F1EA" strokeWidth="1" fill="none" opacity="0.15" />
             </svg>
             <div className={styles.photoLabel}>
-              Dra. Monalisa & Dr. Rafael
+              Dra. Monalisa Rodrigues & Dr. Rafael Cidral
             </div>
           </div>
         </motion.div>

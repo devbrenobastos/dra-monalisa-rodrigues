@@ -1,38 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Hanken+Grotesk:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg-base: #F6F1EA;
-  --bg-surface: #FCFAF6;
-  --bg-deep: #2A2426;
-  --mist: #DED6CC;
+  /* ── Fundos ── */
+  --bg-base: #F4F0EA;
+  --bg-surface: #FAFAF6;
 
-  --text-primary: #2A2426;
-  --text-secondary: #6B615C;
-  --text-on-dark: #F6F1EA;
+  /* ── Seções escuras: navy premium ── */
+  --bg-deep: #1D3255;
 
-  --rose-wash: #F0E0E2;
-  --rose: #C68393;
-  --rose-cta: #97455A;
-  --rose-deep: #7A3447;
+  /* ── Névoa/bordas ── */
+  --mist: #DDD6CC;
 
-  --sage: #6E7A66;
+  /* ── Texto ── */
+  --text-primary: #1A2A3A;
+  --text-secondary: #5C6670;
+  --text-on-dark: #F4F0EA;
 
-  --font-display: 'Fraunces', Georgia, serif;
-  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+  /* ── Rosé ── */
+  --rose-wash: #EED8DC;
+  --rose: #C08090;
+  --rose-cta: #8E3D52;
+  --rose-deep: #6E2D40;
+
+  /* ── Navy ── */
+  --navy: #1D3255;
+  --navy-mid: #2C4A70;
+  --navy-light: #3D6494;
+
+  /* ── Âmbar ── */
+  --amber: #C89840;
+  --amber-light: #D4A853;
+  --amber-wash: #F5EDD8;
+
+  /* ── Sage ── */
+  --sage: #5E7260;
+
+  /* ── Fontes ── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
 
   /* ============================================
      ESCALA TIPOGRÁFICA — RATIO 1.25 (Major Third)
      Base: 17px
      ============================================ */
-  --text-xs:   0.75rem;    /* 12px — eyebrows, micro-copy */
-  --text-sm:   0.875rem;   /* 14px — legendas, rodapé, autor de depoimento */
-  --text-base: 1.0625rem;  /* 17px — body principal (BASE) */
-  --text-md:   1.25rem;    /* 20px — body destaque, subheadline */
-  --text-lg:   1.5rem;     /* 24px — H3, títulos de card */
-  --text-xl:   1.875rem;   /* 30px — H2 seções internas */
-  --text-2xl:  2.25rem;    /* 36px — H2 hero e seções âncora */
-  --text-3xl:  2.75rem;    /* 44px — H1 mobile */
-  --text-4xl:  clamp(2.75rem, 4.5vw, 3.5rem); /* 44–56px — H1 desktop */
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1.0625rem;
+  --text-md:   1.25rem;
+  --text-lg:   1.5rem;
+  --text-xl:   1.875rem;
+  --text-2xl:  2.25rem;
+  --text-3xl:  2.75rem;
+  --text-4xl:  clamp(2.75rem, 4.5vw, 3.5rem);
 
   /* Pesos */
   --weight-regular: 400;
@@ -40,26 +59,26 @@
   --weight-semibold: 600;
 
   /* Line-heights */
-  --leading-tight:   1.05;  /* display headlines */
-  --leading-snug:    1.2;   /* H2, H3 */
-  --leading-normal:  1.5;   /* subtítulos */
-  --leading-relaxed: 1.7;   /* body principal */
-  --leading-loose:   1.8;   /* body em seções escuras */
+  --leading-tight:   1.05;
+  --leading-snug:    1.2;
+  --leading-normal:  1.5;
+  --leading-relaxed: 1.7;
+  --leading-loose:   1.8;
 
   /* Letter-spacing */
-  --tracking-tight:  -0.02em; /* headlines grandes */
+  --tracking-tight:  -0.01em;
   --tracking-normal:  0;
-  --tracking-wide:    0.08em;  /* eyebrows */
-  --tracking-wider:   0.12em;  /* labels uppercase */
+  --tracking-wide:    0.08em;
+  --tracking-wider:   0.12em;
 
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  --shadow-soft: 0 4px 24px rgba(42, 36, 38, 0.06);
-  --shadow-card: 0 2px 16px rgba(42, 36, 38, 0.05);
-  --shadow-sm: 0 2px 8px rgba(42, 36, 38, 0.04);
+  --shadow-soft: 0 4px 24px rgba(29, 50, 85, 0.08);
+  --shadow-card: 0 2px 16px rgba(29, 50, 85, 0.06);
+  --shadow-sm:   0 2px 8px  rgba(29, 50, 85, 0.04);
 }
 
 /* Reset and base styling */
