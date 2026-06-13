@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Hero.module.css';
 import { motion } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
+import { Lock, CreditCard } from 'lucide-react';
 import { fadeUp, scaleIn } from '../../animations/variants';
 import heroBoutique from '../../assets/hero-boutique.webp';
 
@@ -63,9 +64,13 @@ export const Hero: React.FC = () => {
               Agendar minha consulta
             </a>
             <div className={styles.microCopy}>
-              <span>🔒 Conversa direta com a recepção</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <Lock size={13} style={{ opacity: 0.8 }} /> Conversa direta com a recepção
+              </span>
               <span className={styles.separator}>·</span>
-              <span>💳 Parcelamos seu tratamento</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                <CreditCard size={13} style={{ opacity: 0.8 }} /> Parcelamos seu tratamento
+              </span>
             </div>
             <div className={styles.locationLabel}>
               Atendemos em Vinhedo e região de Campinas

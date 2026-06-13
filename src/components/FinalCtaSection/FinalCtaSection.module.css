@@ -130,10 +130,18 @@
   box-shadow: 0 6px 20px rgba(122, 61, 114, 0.25);
 }
 
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
 .microCopy {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  align-items: center;
   gap: 8px;
   font-family: var(--font-body);
   font-size: 0.875rem;
@@ -144,13 +152,17 @@
   opacity: 0.5;
 }
 
+.phoneSeparator {
+  opacity: 0.5;
+  display: inline;
+}
+
 .phoneLabel {
   font-family: var(--font-body);
-  font-size: 1.0625rem;
+  font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-on-dark);
   text-decoration: none;
-  margin-top: 4px;
   transition: color 0.2s ease;
 }
 
@@ -197,11 +209,29 @@
     justify-content: center;
   }
 
+  .infoRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 14px;
+    width: 100%;
+  }
+
   .microCopy {
     font-size: 0.75rem;
     flex-direction: column;
     gap: 4px;
-    margin-top: 14px;
+    align-items: center;
     text-align: center;
+  }
+
+  .phoneSeparator {
+    display: none;
+  }
+
+  .phoneLabel {
+    font-size: 0.75rem;
+    margin-top: 4px;
   }
 }

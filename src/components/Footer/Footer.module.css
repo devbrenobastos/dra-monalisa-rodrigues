@@ -93,9 +93,20 @@
   opacity: 0.7;
 }
 
+.navContactRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
 @media (min-width: 768px) {
   .container {
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1.2fr 1.8fr;
+    gap: 64px;
+  }
+  
+  .navContactRow {
+    grid-template-columns: 1fr 1.5fr;
     gap: 32px;
   }
   

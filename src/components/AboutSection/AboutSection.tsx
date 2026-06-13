@@ -26,7 +26,6 @@ export function AboutSection() {
           {/* Dr. Rafael Cidral */}
           <div className={styles.doctorCard}>
             <div className={styles.cardTop}>
-              <div className={styles.initial}>RC</div>
               <div>
                 <p className={styles.doctorName}>Dr. Rafael Cidral</p>
                 <p className={styles.doctorRole}>Periodontista & Implantodontista</p>
@@ -55,7 +54,6 @@ export function AboutSection() {
           {/* Dra. Monalisa Rodrigues */}
           <div className={styles.doctorCard}>
             <div className={styles.cardTop}>
-              <div className={styles.initial}>MR</div>
               <div>
                 <p className={styles.doctorName}>Dra. Monalisa Rodrigues</p>
                 <p className={styles.doctorRole}>Endodontista</p>

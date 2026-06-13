@@ -2,7 +2,9 @@ import React from 'react';
 import styles from './FinalCtaSection.module.css';
 import { motion } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
+import { CreditCard, MapPin, Smartphone } from 'lucide-react';
 import { fadeUp } from '../../animations/variants';
+
 
 export const FinalCtaSection: React.FC = () => {
   return (
@@ -72,15 +74,21 @@ export const FinalCtaSection: React.FC = () => {
               Falar com a recepção agora
             </motion.a>
             
-            <div className={styles.microCopy}>
-              <span>💳 Parcelamos seu tratamento</span>
-              <span className={styles.separator}>·</span>
-              <span>📍 Vinhedo e região de Campinas</span>
+            <div className={styles.infoRow}>
+              <div className={styles.microCopy}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  <CreditCard size={13} style={{ opacity: 0.8 }} /> Parcelamos seu tratamento
+                </span>
+                <span className={styles.separator}>·</span>
+                <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+                  <MapPin size={13} style={{ opacity: 0.8 }} /> Vinhedo e região de Campinas
+                </span>
+              </div>
+              <span className={styles.separator + ' ' + styles.phoneSeparator}>·</span>
+              <a href="tel:+5519999999999" className={styles.phoneLabel}>
+                <Smartphone size={13} style={{ display: 'inline-block', verticalAlign: '-1.5px', marginRight: '4px', opacity: 0.8 }} /> (19) 99999-9999
+              </a>
             </div>
-            
-            <a href="tel:+5519999999999" className={styles.phoneLabel}>
-              📱 (19) 99999-9999
-            </a>
           </motion.div>
         </div>
       </div>
