@@ -7,7 +7,10 @@ export const Footer: React.FC = () => {
       <div className={styles.container}>
         {/* Col 1: Brand & Tagline */}
         <div className={styles.col}>
-          <span className={styles.logo}>Dra. Monalisa Rodrigues & Dr. Rafael Cidral</span>
+          <span className={styles.logo}>
+            Dra. Monalisa Rodrigues
+            <br />& Dr. Rafael Cidral
+          </span>
           <p className={styles.tagline}>
             Endodontia · Implantodontia · Periodontia em Vinhedo.
             Cuidado humanizado e individualizado para o seu sorriso.
