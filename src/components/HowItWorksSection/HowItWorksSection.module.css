@@ -1,6 +1,6 @@
 .section {
   padding: 120px 0;
-  background: var(--bg-base);
+  background: var(--bg-surface);
 }
 
 @media (max-width: 1023px) {
@@ -57,12 +57,12 @@
 /* ─── CARD ─── */
 .card {
   position: relative;
-  background: #FFFFFF;
+  background: var(--bg-base);
   border-radius: 24px;
   padding: 32px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(142, 61, 82, 0.08);
+  box-shadow: var(--shadow-card);
+  border: 0.5px solid var(--mist);
   transition: transform 300ms ease, box-shadow 300ms ease;
   z-index: 2;
   display: flex;
@@ -72,7 +72,7 @@
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-soft);
 }
 
 /* Linha superior colorida — assinatura do card */

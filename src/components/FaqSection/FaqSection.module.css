@@ -1,4 +1,4 @@
-.section {
+﻿.section {
   background-color: var(--bg-base);
   padding: 120px 0;
 }
@@ -57,25 +57,25 @@
 }
 
 .faqItem {
-  border: 1px solid var(--mist);
-  border-radius: var(--radius-md);
-  margin-bottom: 12px; /* mais espaço entre os itens */
+  border: 1px solid rgba(30, 27, 58, 0.10); /* borda escura de alto contraste */
+  border-radius: 14px; /* border-radius 14px */
+  margin-bottom: 12px;
   overflow: hidden;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #FFFFFF; /* Fundo branco nos cards */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  background-color: var(--text-on-dark); /* Fundo branco nos cards */
+  box-shadow: 0 10px 30px rgba(30, 27, 58, 0.04);
 }
 
 .faqItem:hover {
   border-color: var(--rose);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 18px 40px rgba(30, 27, 58, 0.06);
 }
 
 .faqTrigger {
   font-family: var(--font-body);
   font-size: var(--text-md); /* Pergunta: 18px */
   font-weight: var(--weight-semibold); /* weight: 600 */
-  color: var(--text-primary);
+  color: var(--text-primary); /* pergunta em var(--text-primary) */
   text-align: left;
   width: 100%;
   display: flex;
@@ -84,7 +84,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 24px 32px; /* Mais espaço interno */
+  padding: 20px 24px; /* padding 20px 24px */
   gap: 16px;
   transition: color 0.2s ease;
   line-height: 1.4;
@@ -107,10 +107,10 @@
 }
 
 .faqContent {
-  padding: 0 32px 24px; /* Mais espaço interno */
+  padding: 0 24px 20px; /* padding ajustado */
   font-size: var(--text-base); /* Resposta: 16px */
-  color: var(--text-secondary);
-  line-height: var(--leading-loose); /* line-height 1.8 */
+  color: var(--text-secondary); /* resposta em var(--text-secondary) */
+  line-height: 1.8; /* line-height 1.8 */
   font-family: var(--font-body);
 }
 

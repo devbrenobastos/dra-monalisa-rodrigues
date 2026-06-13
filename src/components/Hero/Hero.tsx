@@ -26,31 +26,13 @@ export const Hero: React.FC = () => {
 
           <h1 className={styles.headline}>
             <motion.span
-              style={{ display: 'block' }}
+              style={{ display: 'inline-block' }}
               custom={1}
               variants={fadeUp}
               initial="hidden"
               animate="visible"
             >
-              Talvez você tenha adiado
-            </motion.span>
-            <motion.span
-              style={{ display: 'block' }}
-              custom={2}
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-            >
-              essa consulta por meses.
-            </motion.span>
-            <motion.span
-              style={{ display: 'block' }}
-              custom={2.5}
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-            >
-              Ou até por <em>anos.</em>
+              Talvez você tenha adiado essa consulta por meses. Ou até por <em>anos.</em>
             </motion.span>
           </h1>
 
@@ -62,9 +44,9 @@ export const Hero: React.FC = () => {
             animate="visible"
           >
             <strong className={styles.subheroStrong}>
-              Tudo bem.<br />O importante é que você chegou até aqui.
+              Tudo bem. O importante é que você chegou até aqui.
             </strong>
-            <br /><br />
+            {" "}
             Dois especialistas. Um cuida do seu canal, outro do seu implante.
             Mais de 2.000 casos realizados e atendimento que respeita o seu tempo.
           </motion.p>

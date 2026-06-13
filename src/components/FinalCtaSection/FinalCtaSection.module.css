@@ -1,5 +1,5 @@
 .section {
-  background: var(--bg-dark-gradient); /* premium dark gradient */
+  background: var(--bg-deep);
   color: var(--text-on-dark);
   padding: 120px 0;
   position: relative;
@@ -108,7 +108,7 @@
 
 .ctaButton {
   background: var(--rose-cta);
-  color: #FFFFFF; /* white text */
+  color: var(--text-on-dark); /* white text */
   font-family: var(--font-body);
   font-weight: var(--weight-semibold); /* 600 */
   font-size: 0.9375rem; /* 15px */
@@ -116,7 +116,7 @@
   height: 52px; /* Altura 52px */
   border-radius: var(--radius-pill); /* 999px */
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(142, 61, 82, 0.15);
+  box-shadow: 0 4px 14px rgba(122, 61, 114, 0.15);
   text-align: center;
   display: inline-flex;
   align-items: center;
@@ -125,9 +125,9 @@
 }
 
 .ctaButton:hover {
-  background: var(--rose-deep); /* #7A3446 */
+  background: var(--rose-deep); /* var(--rose-deep) */
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(142, 61, 82, 0.25);
+  box-shadow: 0 6px 20px rgba(122, 61, 114, 0.25);
 }
 
 .microCopy {
@@ -137,7 +137,7 @@
   gap: 8px;
   font-family: var(--font-body);
   font-size: 0.875rem;
-  color: var(--mist);
+  color: var(--text-on-dark);
 }
 
 .separator {

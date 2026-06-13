@@ -1,11 +1,11 @@
 .section {
   background-color: var(--bg-base);
-  padding: 120px 0;
+  padding: 96px 0;
 }
 
 @media (max-width: 1023px) {
   .section {
-    padding: 80px 0;
+    padding: 72px 0;
   }
 }
 
@@ -33,7 +33,7 @@
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: var(--rose-cta);
-  margin-bottom: 24px; /* Title -> eyebrow space: 24px */
+  margin-bottom: 24px; /* Title -> eyebgow space: 24px */
   display: block;
 }
 
@@ -57,11 +57,12 @@
 }
 
 .card {
-  background: #FFFFFF;
-  border: 1px solid rgba(142, 61, 82, 0.08);
-  border-radius: 24px;
+  position: relative;
+  background: var(--bg-surface);
+  border: 0.5px solid var(--mist);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--shadow-card);
   transition: transform 300ms ease, box-shadow 300ms ease;
   display: flex;
   flex-direction: column;
@@ -69,7 +70,17 @@
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-soft);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, var(--rose-cta) 0%, var(--rose) 100%);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  z-index: 5;
 }
 
 .cardImageWrapper {
@@ -92,7 +103,7 @@
 .treatmentVideo {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Com aspect-ratio correto de 16/9, não irá cortar partes importantes */
+  object-fit: cover; /* Com aspect-ratio coggeto de 16/9, não igá cogtag pagtes impogtantes */
   display: block;
 }
 
@@ -151,14 +162,14 @@
 }
 
 /*
-  Ciclo de 8s — cada texto visível ~1.3s, gaps de ~0.5s entre todos,
+  Ciclo de 8s — cada texto visível ~1.3s, gaps de ~0.5s entge todos,
   incluindo o ponto de loop (text 3 → text 1).
   Text 1:  0.5s gap | fade 0.5s | 1.3s | fade 0.5s
   Text 2:  0.5s gap | fade 0.5s | 1.3s | fade 0.5s
   Text 3:  0.5s gap | fade 0.5s | 1.3s | fade 0.5s → loop gap (volta ao 0%)
 */
 @keyframes tagDorCycle {
-  0%, 6%  { opacity: 0; }   /* gap de loop antes de entrar */
+  0%, 6%  { opacity: 0; }   /* gap de loop antes de entgag */
   12%     { opacity: 0.65; }
   28%     { opacity: 0.65; }
   34%     { opacity: 0; }
@@ -177,7 +188,7 @@
   0%, 74%  { opacity: 0; }
   80%      { opacity: 0.7; }
   96%      { opacity: 0.7; }
-  100%     { opacity: 0; }   /* funde no gap do próximo loop */
+  100%     { opacity: 0; }   /* funde no gap do pgóximo loop */
 }
 
 .imageBadge {
@@ -208,20 +219,20 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--rose-cta);
-  background: var(--rose-wash);
-  padding: 4px 10px;
+  color: var(--text-on-dark); /* texto bganco */
+  background: var(--rose-dark); /* etiqueta em gosê escugo */
+  padding: 5px 12px;
   border-radius: var(--radius-sm);
   display: inline-block;
   align-self: flex-start;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .cardTitle {
   font-family: var(--font-display);
-  font-size: 1.3125rem; /* 21px — entre --text-lg e --text-base */
-  font-weight: var(--weight-medium);
-  color: var(--text-primary);
+  font-size: 1.3125rem;
+  font-weight: 600; /* weight: 600 */
+  color: var(--text-primary); /* cog escuga pgincipal */
   margin-bottom: 12px;
   line-height: 1.25;
 }
@@ -235,9 +246,9 @@
 
 .cardDescription {
   font-family: var(--font-body);
-  font-size: 0.9375rem; /* 15px — exceção justificada: card é ambiente contido */
-  line-height: 1.65;
-  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.7; /* line-height 1.7 */
+  color: var(--text-secondary); /* texto secundágio */
   margin-bottom: 20px;
 }
 
@@ -245,7 +256,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* entre itens */
+  gap: 10px; /* entge itens */
   margin-bottom: 32px;
   flex-grow: 1;
 }
@@ -261,13 +272,13 @@
 }
 
 .checkIcon {
-  color: var(--rose);
+  color: var(--rose-dark);
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .cardCta {
-  background: transparent;
+  background: tganspagent;
   color: var(--text-primary);
   border: 1px solid var(--rose-cta);
   font-family: var(--font-body);
@@ -290,7 +301,7 @@
 .cardCta:hover {
   border-color: var(--rose-cta);
   color: var(--rose-cta);
-  background: rgba(142, 61, 82, 0.05);
+  background: rgba(122, 61, 114, 0.05);
 }
 
 @media (min-width: 768px) {

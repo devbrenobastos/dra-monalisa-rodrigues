@@ -1,73 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap');
 
 :root {
-  /* ── Fundos ── */
-  --bg-base:    #F8F6F4;
-  --bg-surface: #F2ECE7;
-  --bg-dark-gradient: linear-gradient(135deg, #1F1730, #2A2140, #312549);
-
-  /* ── Seções escuras: azul profundo ── */
-  --bg-deep: #273F63;
-
-  /* ── Névoa/bordas ── */
-  --mist: rgba(142, 61, 82, 0.08);
-
-  /* ── Texto ── */
-  --text-primary:   #1B1B1B;
-  --text-secondary: #5F5A56;
-  --text-on-dark:   #F8F6F4;
-
-  /* ── Lilás / Rosê / Destaques ── */
-  --rose-wash: rgba(142, 61, 82, 0.08);
-  --rose:      #8E3D52;
-  --rose-cta:  #8E3D52;
-  --rose-deep: #7A3446;
-  --amber:     #D6B06A; /* Champagne */
-
-  /* ── Fontes ── */
+  --bg-base:    #F7F4F8;
+  --bg-surface: #FDFCFE;
+  --bg-deep:    #1E1B3A;
+  --mist:       #D8D0DC;
+  --text-primary:   #1E1B3A;
+  --text-secondary: #5A5468;
+  --text-on-dark:   #F7F4F8;
+  --rose-wash: #EDD8E8;
+  --rose:      #C090B8;
+  --rose-cta:  #7A3D72;
+  --rose-deep: #5C2A56;
   --font-display: 'Libre Baskerville', Georgia, serif;
   --font-body:    'DM Sans', system-ui, sans-serif;
-
-  /* ============================================
-     ESCALA TIPOGRÁFICA — RATIO 1.25 (Major Third)
-     Base: 16px
-     ============================================ */
-  --text-xs:   0.75rem;
-  --text-sm:   0.875rem;
-  --text-base: 1rem;       /* 16px */
-  --text-md:   1.125rem;   /* 18px */
-  --text-lg:   1.375rem;
-  --text-xl:   2rem;       /* 32px - Mobile H2 */
-  --text-2xl:  2.375rem;   /* 38px - Tablet H2 */
-  --text-3xl:  2.75rem;    /* 44px - Desktop H2 */
-  --text-4xl:  3.5rem;     /* 56px - Hero H1 */
-
-  /* Pesos */
-  --weight-regular: 400;
-  --weight-medium:  500;
-  --weight-semibold: 600;
-
-  /* Line-heights */
-  --leading-tight:   1.05;   /* Hero H1 */
-  --leading-snug:    1.15;   /* Section H2 */
-  --leading-normal:  1.5;
-  --leading-relaxed: 1.7;    /* Subtitles */
-  --leading-loose:   1.8;    /* Body text */
-
-  /* Letter-spacing */
-  --tracking-tight:  -0.025em;
-  --tracking-normal:  0;
-  --tracking-wide:    0.08em;
-  --tracking-wider:   0.12em;
-
-  --radius-sm:   8px;
-  --radius-md:   16px;
-  --radius-lg:   24px;
-  --radius-pill: 999px;
-
-  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.04);
-  --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.02);
-  --shadow-sm:   0 2px 8px  rgba(0, 0, 0, 0.02);
+  --radius-sm: 8px; --radius-md: 16px;
+  --radius-lg: 24px; --radius-pill: 999px;
+  --shadow-soft: 0 4px 24px rgba(30,27,58,.09);
+  --shadow-card: 0 2px 16px rgba(30,27,58,.06);
 }
 
 /* Reset and base styling */
@@ -85,7 +35,7 @@ html {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 24px;   /* mobile */
+  padding: 0 24px;
 }
 
 @media (min-width: 768px) {
@@ -112,28 +62,25 @@ body {
   background-color: var(--bg-base);
   color: var(--text-primary);
   min-height: 100vh;
-  line-height: var(--leading-loose); /* 1.8 */
-  font-size: var(--text-base); /* 16px */
+  line-height: var(--leading-relaxed);
+  font-size: var(--text-base);
   -webkit-font-smoothing: antialiased;
 }
 
+/* Hierarquia tipográfica — headings de seção */
 .section-title {
   font-family: var(--font-display);
-  font-size: var(--text-3xl); /* 44px */
-  font-weight: var(--weight-semibold);
-  line-height: var(--leading-snug); /* 1.15 */
+  font-size: clamp(1.875rem, 2.8vw, 2.375rem);
+  font-weight: var(--weight-regular);
+  line-height: 1.15;
+  letter-spacing: -0.025em;
   color: var(--text-primary);
-}
-
-@media (max-width: 1023px) {
-  .section-title {
-    font-size: var(--text-2xl); /* 38px */
-  }
 }
 
 @media (max-width: 767px) {
   .section-title {
-    font-size: var(--text-xl); /* 32px */
+    font-size: clamp(1.625rem, 6vw, 1.875rem);
+    line-height: 1.25;
   }
 }
 

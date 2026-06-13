@@ -1,7 +1,7 @@
 .section {
-  background: var(--bg-dark-gradient); /* Premium gradient */
+  background: var(--bg-deep); /* Premium dark gradient with high contrast */
   color: var(--text-on-dark);
-  padding: 120px 0;
+  padding: 96px 0;
   position: relative;
   overflow: hidden; /* impede watermark de vazar */
 }
@@ -23,7 +23,7 @@
 
 @media (max-width: 1023px) {
   .section {
-    padding: 80px 0;
+    padding: 72px 0;
   }
 }
 
@@ -75,15 +75,15 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--amber); /* Destaque Champagne */
+  color: var(--rose); /* Destaque Champagne */
   margin-bottom: 12px;
 }
 
 .title {
   font-family: var(--font-display);
-  font-size: var(--text-3xl); /* 44px */
-  color: var(--text-on-dark);
-  font-weight: var(--weight-semibold); /* weight 600 */
+  font-size: clamp(2.25rem, 3.5vw, 2.875rem); /* 44px */
+  color: var(--text-on-dark); /* título off-white */
+  font-weight: var(--weight-regular); /* weight 600 */
   line-height: var(--leading-snug); /* 1.15 */
   letter-spacing: var(--tracking-tight);
   margin-bottom: 24px; /* Title -> content space: 24px */
@@ -94,7 +94,7 @@
   font-family: var(--font-display);
   font-style: italic;
   font-weight: inherit;
-  color: var(--amber);
+  color: var(--rose-cta);
 }
 
 .bodyText {
@@ -106,9 +106,9 @@
 
 .bodyText p {
   font-family: var(--font-body);
-  font-size: var(--text-base); /* 17px */
-  line-height: var(--leading-loose); /* 1.8 — mais espaçado em fundo escuro */
-  color: var(--mist);
+  font-size: var(--text-base); /* 16px */
+  line-height: var(--leading-loose); /* 1.8 */
+  color: var(--text-on-dark); /* parágrafos off-white de alto contraste */
   max-width: 480px;
 }
 
@@ -132,10 +132,10 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--rose-cta);
+  color: var(--rose); /* Destaque rosê claro */
   margin: 0 0 10px;
   padding-bottom: 6px;
-  border-bottom: 1px solid rgba(122, 61, 114, 0.25);
+  border-bottom: 1px solid rgba(192, 144, 184, 0.25);
 }
 
 .bulletList {
@@ -153,26 +153,26 @@
   gap: 10px;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  color: var(--text-on-dark);
+  color: var(--text-on-dark); /* marcadores com melhor contraste */
   line-height: 1.5;
-  opacity: 0.85;
+  opacity: 0.95;
 }
 
 .bulletDot {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--rose-cta);
+  background: var(--rose);
   flex-shrink: 0;
   margin-top: 6px;
 }
 
 .ctaButton {
   background: transparent;
-  color: #FFFFFF;
-  border: 1px solid var(--rose-cta);
+  color: var(--text-on-dark);
+  border: 1.5px solid rgba(247, 244, 248, 0.3);
   font-family: var(--font-body);
-  font-weight: var(--weight-semibold); /* 600 */
+  font-weight: var(--weight-regular); /* 600 */
   font-size: 0.9375rem; /* 15px */
   padding: 0 28px;
   height: 52px;
@@ -187,7 +187,8 @@
 }
 
 .ctaButton:hover {
-  background: rgba(142, 61, 82, 0.05);
+  background: rgba(247, 244, 248, 0.1);
+  border-color: rgba(247, 244, 248, 0.5);
 }
 
 .imageCol {
