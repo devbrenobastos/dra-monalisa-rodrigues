@@ -125,6 +125,14 @@
   opacity: 0.85;
 }
 
+.doctorCro {
+  font-family: var(--font-body);
+  font-size: 0.725rem;
+  color: var(--text-on-dark);
+  margin: 4px 0 0;
+  opacity: 0.6;
+}
+
 /* Lista de credenciais */
 .credentials {
   list-style: none;

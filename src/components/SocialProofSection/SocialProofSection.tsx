@@ -47,25 +47,25 @@ export const SocialProofSection: React.FC = () => {
         <div className={styles.testimonialGrid}>
           {[
             {
-              initials: 'JS',
-              name: 'Juliana Santos',
+              initials: 'JR',
+              name: 'Jorge R.',
               city: 'Vinhedo',
               stars: 5,
-              quote: 'Passei três noites sem dormir de dor. Achei que o tratamento seria pior ainda. Foi justamente o contrário.',
+              quote: 'Super profissionais. Competência técnica e empatia incríveis. Atendimento impecável. Recomendo sem a menor dúvida.',
             },
             {
-              initials: 'CA',
-              name: 'Carlos Alberto',
-              city: 'Campinas',
-              stars: 5,
-              quote: 'Tinha pavor de dentista há 15 anos. Fui tratado com tanta calma que voltou para fazer o implante também.',
-            },
-            {
-              initials: 'MC',
-              name: 'Mariana Costa',
+              initials: 'DV',
+              name: 'Daniel Vita',
               city: 'Vinhedo',
               stars: 5,
-              quote: 'O casal de doutores é incrível. Senti que me conheciam de longa data já na primeira consulta.',
+              quote: 'Muito satisfeito com o atendimento! São excelentes profissionais e conhecem bem sobre odontologia! Recomendo nota 1.000.',
+            },
+            {
+              initials: 'KV',
+              name: 'Karina Vita',
+              city: 'Vinhedo',
+              stars: 5,
+              quote: 'São excelentes profissionais, cuidadosos, pacientes, só elogios, gratidão por tudo.',
             },
           ].map((t, i) => (
             <motion.div

@@ -60,7 +60,7 @@ export const Hero: React.FC = () => {
             initial="hidden"
             animate="visible"
           >
-            <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
+            <a href="https://wa.me/5519984427733" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
               Agendar minha consulta
             </a>
             <div className={styles.microCopy}>

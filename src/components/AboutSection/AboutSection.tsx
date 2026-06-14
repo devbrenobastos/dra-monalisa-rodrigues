@@ -27,14 +27,19 @@ export function AboutSection() {
           <div className={styles.doctorCard}>
             <div className={styles.cardTop}>
               <div>
-                <p className={styles.doctorName}>Dr. Rafael Cidral</p>
+                <p className={styles.doctorName}>Dr. Rafael R. M. Cidral</p>
                 <p className={styles.doctorRole}>Periodontista & Implantodontista</p>
+                <p className={styles.doctorCro}>CRO-SP 94.767</p>
               </div>
             </div>
             <ul className={styles.credentials}>
               <li>
                 <span className={styles.dot} />
-                Periodontista e Implantodontista
+                Formado pela São Leopoldo Mandic
+              </li>
+              <li>
+                <span className={styles.dot} />
+                Atua com Implantodontia, Periodontia e Cirurgia Geral
               </li>
               <li>
                 <span className={styles.dot} />
@@ -56,13 +61,22 @@ export function AboutSection() {
             <div className={styles.cardTop}>
               <div>
                 <p className={styles.doctorName}>Dra. Monalisa Rodrigues</p>
-                <p className={styles.doctorRole}>Endodontista</p>
+                <p className={styles.doctorRole}>Endodontista & Clínica Geral</p>
+                <p className={styles.doctorCro}>CRO-SP 105.267</p>
               </div>
             </div>
             <ul className={styles.credentials}>
               <li>
                 <span className={styles.dot} />
-                Endodontista com mais de 2.000 casos realizados
+                Formada pela UNIP
+              </li>
+              <li>
+                <span className={styles.dot} />
+                Atua com Endodontia e Clínica Geral
+              </li>
+              <li>
+                <span className={styles.dot} />
+                Endodontista com mais de 2.000 atendimentos realizados
               </li>
               <li>
                 <span className={styles.dot} />

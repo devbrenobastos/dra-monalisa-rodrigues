@@ -43,7 +43,7 @@ export const Navbar: React.FC = () => {
       >
         <div className={styles.container}>
           <a href="#" className={styles.logo}>
-            Dra. Monalisa & Dr. Rafael Cidral
+            Dra. Monalisa Rodrigues & Dr. Rafael R. M. Cidral
           </a>
 
           <div className={styles.desktopLinks}>
@@ -55,7 +55,7 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className={styles.desktopCta}>
-            <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
+            <a href="https://wa.me/5519984427733" target="_blank" rel="noopener noreferrer" className={styles.ctaButton}>
               Agendar Consulta
             </a>
           </div>
@@ -97,7 +97,7 @@ export const Navbar: React.FC = () => {
               </div>
               <div className={styles.drawerCta}>
                 <a 
-                  href="https://wa.me/5519999999999" 
+                  href="https://wa.me/5519984427733" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className={styles.drawerCtaButton}

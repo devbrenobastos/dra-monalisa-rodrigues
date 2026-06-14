@@ -77,7 +77,7 @@ export const TreatmentsSection: React.FC = () => {
                 </li>
               </ul>
               
-              <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer" className={styles.cardCta}>
+              <a href="https://wa.me/5519984427733" target="_blank" rel="noopener noreferrer" className={styles.cardCta}>
                 Quero saber mais sobre implante
               </a>
             </div>
@@ -140,11 +140,50 @@ export const TreatmentsSection: React.FC = () => {
                 </li>
               </ul>
               
-              <a href="https://wa.me/5519999999999" target="_blank" rel="noopener noreferrer" className={styles.cardCta}>
+              <a href="https://wa.me/5519984427733" target="_blank" rel="noopener noreferrer" className={styles.cardCta}>
                 Quero saber mais sobre canal
               </a>
             </div>
           </motion.div>
+        </div>
+
+        {/* Technical Procedures Grid */}
+        <div className={styles.proceduresBlock}>
+          <h3 className={styles.proceduresTitle}>Nossos Procedimentos</h3>
+          
+          <div className={styles.proceduresGrid}>
+            {/* Category 1: Implante e Prótese */}
+            <div className={styles.proceduresCol}>
+              <h4 className={styles.proceduresColTitle}>Implante e Prótese</h4>
+              <ul className={styles.proceduresList}>
+                <li>Implante simples/múltiplos</li>
+                <li>Protocolo</li>
+                <li>Manutenção de Protocolo</li>
+                <li>Facetas</li>
+                <li>Prótese sobre implante</li>
+                <li>Prótese sobre dente</li>
+              </ul>
+            </div>
+
+            {/* Category 2: Cirurgia */}
+            <div className={styles.proceduresCol}>
+              <h4 className={styles.proceduresColTitle}>Cirurgia</h4>
+              <ul className={styles.proceduresList}>
+                <li>Cirurgia de 3º Molar</li>
+                <li>Cirurgia Geral</li>
+              </ul>
+            </div>
+
+            {/* Category 3: Periodontia */}
+            <div className={styles.proceduresCol}>
+              <h4 className={styles.proceduresColTitle}>Periodontia</h4>
+              <ul className={styles.proceduresList}>
+                <li>Cirurgia plástica periodontal</li>
+                <li>Raspagem/Limpeza</li>
+                <li>Restaurações</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -58,7 +58,7 @@ export const FinalCtaSection: React.FC = () => {
             custom={4}
           >
             <motion.a 
-              href="https://wa.me/5519999999999" 
+              href="https://wa.me/5519984427733" 
               target="_blank" 
               rel="noopener noreferrer" 
               className={styles.ctaButton}
@@ -85,8 +85,8 @@ export const FinalCtaSection: React.FC = () => {
                 </span>
               </div>
               <span className={styles.separator + ' ' + styles.phoneSeparator}>·</span>
-              <a href="tel:+5519999999999" className={styles.phoneLabel}>
-                <Smartphone size={13} style={{ display: 'inline-block', verticalAlign: '-1.5px', marginRight: '4px', opacity: 0.8 }} /> (19) 99999-9999
+              <a href="tel:+5519984427733" className={styles.phoneLabel}>
+                <Smartphone size={13} style={{ display: 'inline-block', verticalAlign: '-1.5px', marginRight: '4px', opacity: 0.8 }} /> (19) 98442-7733
               </a>
             </div>
           </motion.div>

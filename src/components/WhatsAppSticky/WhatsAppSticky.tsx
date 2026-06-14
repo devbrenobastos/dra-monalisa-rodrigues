@@ -30,7 +30,7 @@ export const WhatsAppSticky: React.FC = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.a
-          href="https://wa.me/5519999999999"
+          href="https://wa.me/5519984427733"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.stickyBtn}
