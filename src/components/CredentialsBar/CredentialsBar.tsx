@@ -19,12 +19,12 @@ export const CredentialsBar: React.FC = () => {
     },
     {
       icon: <CheckCircle className={styles.icon} size={20} />,
-      number: 'Dr. Rafael',
+      number: 'Dr. Rafael R. M. Cidral',
       label: 'Implante & Periodontia'
     },
     {
       icon: <Heart className={styles.icon} size={20} />,
-      number: 'Dra. Monalisa',
+      number: 'Dra. Monalisa Rodrigues',
       label: 'Endodontia'
     }
   ];
