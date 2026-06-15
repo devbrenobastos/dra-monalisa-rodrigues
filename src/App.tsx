@@ -10,10 +10,10 @@ import { SocialProofSection } from './components/SocialProofSection/SocialProofS
 import { HowItWorksSection } from './components/HowItWorksSection/HowItWorksSection';
 import { WhatsAppSticky } from './components/WhatsAppSticky/WhatsAppSticky';
 
-const TestimonialsSection = lazy(() => import('./components/TestimonialsSection/TestimonialsSection').then(m => ({ default: m.TestimonialsSection })));
-const FaqSection = lazy(() => import('./components/FaqSection/FaqSection').then(m => ({ default: m.FaqSection })));
-const FinalCtaSection = lazy(() => import('./components/FinalCtaSection/FinalCtaSection').then(m => ({ default: m.FinalCtaSection })));
-const Footer = lazy(() => import('./components/Footer/Footer').then(m => ({ default: m.Footer })));
+const TestimonialsSection = lazy(() => import('./components/BelowFold').then(m => ({ default: m.TestimonialsSection })));
+const FaqSection = lazy(() => import('./components/BelowFold').then(m => ({ default: m.FaqSection })));
+const FinalCtaSection = lazy(() => import('./components/BelowFold').then(m => ({ default: m.FinalCtaSection })));
+const Footer = lazy(() => import('./components/BelowFold').then(m => ({ default: m.Footer })));
 
 const App: React.FC = () => {
   return (
