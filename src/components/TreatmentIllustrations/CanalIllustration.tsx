@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 export function CanalIllustration() {
   return (
@@ -62,7 +62,7 @@ export function CanalIllustration() {
 
       {/* LINHA PRINCIPAL — percurso da dor ao alívio */}
       {/* Segmento esquerdo: frequência irregular (dor) */}
-      <motion.path
+      <m.path
         d="M 0 100
            L 20 100
            L 30 100
@@ -94,7 +94,7 @@ export function CanalIllustration() {
       />
 
       {/* Segmento direito: linha cada vez mais calma */}
-      <motion.path
+      <m.path
         d="M 140 100
            C 160 100, 170 104, 185 100
            C 200 96, 210 102, 230 100
@@ -110,7 +110,7 @@ export function CanalIllustration() {
       />
 
       {/* Pico de destaque no segmento de dor */}
-      <motion.path
+      <m.path
         d="M 43 100 L 45 50 L 47 100"
         stroke="#97455A"
         strokeWidth="1.5"
@@ -122,7 +122,7 @@ export function CanalIllustration() {
       />
 
       {/* Ponto de transição — círculo pulsante no ponto de virada */}
-      <motion.circle
+      <m.circle
         cx="140" cy="100" r="5"
         fill="var(--bg-surface)"
         stroke="var(--rose-cta)"

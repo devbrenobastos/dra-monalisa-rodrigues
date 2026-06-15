@@ -182,7 +182,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--rose);
-  opacity: 0.6;
+  opacity: 1;
 }
 
 .focusValue {

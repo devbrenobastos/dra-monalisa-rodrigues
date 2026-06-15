@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './TreatmentsSection.module.css';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Check } from 'lucide-react';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 import { slideLeft, slideRight } from '../../animations/variants';
@@ -25,12 +25,12 @@ export const TreatmentsSection: React.FC = () => {
 
         <div className={styles.grid}>
           {/* Card 1: Implante Dentário */}
-          <motion.div 
+          <m.div 
             className={styles.card}
             variants={slideLeft}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             <div className={styles.cardImageWrapper}>
               <div className={styles.videoStage}>
@@ -81,15 +81,15 @@ export const TreatmentsSection: React.FC = () => {
                 Quero saber mais sobre implante
               </a>
             </div>
-          </motion.div>
+          </m.div>
 
           {/* Card 2: Tratamento de Canal */}
-          <motion.div 
+          <m.div 
             className={styles.card}
             variants={slideRight}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             <div className={styles.cardImageWrapper}>
               <div className={styles.videoStage}>
@@ -144,7 +144,7 @@ export const TreatmentsSection: React.FC = () => {
                 Quero saber mais sobre canal
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Technical Procedures Grid */}

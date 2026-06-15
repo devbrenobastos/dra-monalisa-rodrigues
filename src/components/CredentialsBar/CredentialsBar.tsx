@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './CredentialsBar.module.css';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { Award, Star, CheckCircle, Heart } from 'lucide-react';
 import { fadeUp, staggerContainer } from '../../animations/variants';
 
@@ -31,15 +31,15 @@ export const CredentialsBar: React.FC = () => {
 
   return (
     <section className={styles.bar}>
-      <motion.div 
+      <m.div 
         className={styles.container}
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, margin: "-40px" }}
+        viewport={{ once: true, margin: "-100px" }}
       >
         {items.map((item, idx) => (
-          <motion.div 
+          <m.div 
             key={idx} 
             className={styles.item}
             variants={fadeUp}
@@ -60,9 +60,9 @@ export const CredentialsBar: React.FC = () => {
               </span>
               <span className={styles.label}>{item.label}</span>
             </div>
-          </motion.div>
+          </m.div>
         ))}
-      </motion.div>
+      </m.div>
     </section>
   );
 };

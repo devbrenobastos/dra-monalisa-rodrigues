@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './SocialProofSection.module.css';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 
 export const SocialProofSection: React.FC = () => {
@@ -14,27 +14,27 @@ export const SocialProofSection: React.FC = () => {
         </div>
 
         {/* Headline principal */}
-        <motion.h2
+        <m.h2
           className={styles.headline}
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           Mais de{' '}
-          <motion.span
+          <m.span
             className={styles.bigNumber}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             2.000
-          </motion.span>
+          </m.span>
           {' '}casos.
           <br />Nota 5,0.
           <br />Pacientes <em>reais</em>.
-        </motion.h2>
+        </m.h2>
 
         {/* Sub */}
         <p className={styles.sub}>
@@ -68,12 +68,12 @@ export const SocialProofSection: React.FC = () => {
               quote: 'São excelentes profissionais, cuidadosos, pacientes, só elogios, gratidão por tudo.',
             },
           ].map((t, i) => (
-            <motion.div
+            <m.div
               key={i}
               className={styles.testimonialCard}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: 0.2 + i * 0.12, ease: [0.22, 1, 0.36, 1] }}
             >
               <div className={styles.cardTop}>
@@ -85,7 +85,7 @@ export const SocialProofSection: React.FC = () => {
                 <p className={styles.stars}>{'★'.repeat(t.stars)}</p>
               </div>
               <p className={styles.quoteText}>"{t.quote}"</p>
-            </motion.div>
+            </m.div>
           ))}
         </div>
 

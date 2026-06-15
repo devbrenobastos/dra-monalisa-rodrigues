@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <>
-      <motion.nav 
+      <m.nav 
         className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}
         initial={{ y: -64, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -76,11 +76,11 @@ export const Navbar: React.FC = () => {
             <span className={styles.bar}></span>
           </button>
         </div>
-      </motion.nav>
+      </m.nav>
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <m.div 
             className={styles.drawer}
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
@@ -112,7 +112,7 @@ export const Navbar: React.FC = () => {
                 </a>
               </div>
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </>

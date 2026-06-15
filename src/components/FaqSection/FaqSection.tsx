@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './FaqSection.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 import { fadeUp } from '../../animations/variants';
@@ -15,12 +15,12 @@ interface FaqItemProps {
 
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle, index }) => {
   return (
-    <motion.div 
+    <m.div 
       className={styles.faqItem}
       variants={fadeUp}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      viewport={{ once: true, margin: "-100px" }}
       custom={index * 0.05}
     >
       <button 
@@ -29,18 +29,18 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle, i
         aria-expanded={isOpen}
       >
         <span>{question}</span>
-        <motion.span 
+        <m.span 
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className={styles.iconWrapper}
         >
           <Plus size={18} />
-        </motion.span>
+        </m.span>
       </button>
  
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.div
+          <m.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -50,10 +50,10 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer, isOpen, onToggle, i
             <div className={styles.faqContent}>
               {answer}
             </div>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </m.div>
   );
 };
 
@@ -95,24 +95,24 @@ export const FaqSection: React.FC = () => {
     <section className={styles.section} id="faq">
       <div className={styles.container}>
         <div className={styles.header}>
-          <motion.div
+          <m.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-100px" }}
           >
             <SectionLabel>Dúvidas frequentes</SectionLabel>
-          </motion.div>
-          <motion.h2 
+          </m.div>
+          <m.h2 
             className={styles.title}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.1 }}
           >
             Respondidas com <em>honestidade.</em>
-          </motion.h2>
+          </m.h2>
         </div>
 
         <div className={styles.faqList}>

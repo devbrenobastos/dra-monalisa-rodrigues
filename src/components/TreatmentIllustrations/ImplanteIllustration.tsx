@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 
 // Posições fixas para as partículas — geradas deterministicamente
 const LEFT_PARTICLES = [
@@ -50,7 +50,7 @@ export function ImplanteIllustration() {
 
       {/* ─── LADO ESQUERDO: partículas dispersas ─── */}
       {LEFT_PARTICLES.map((p, i) => (
-        <motion.circle
+        <m.circle
           key={i}
           cx={p.cx} cy={p.cy} r={p.r}
           fill="var(--rose)"
@@ -73,7 +73,7 @@ export function ImplanteIllustration() {
         [0, 2], [1, 3], [2, 4], [3, 5], [5, 7],
         [6, 9], [4, 8], [7, 10], [9, 11],
       ].map(([a, b], i) => (
-        <motion.line
+        <m.line
           key={i}
           x1={LEFT_PARTICLES[a].cx} y1={LEFT_PARTICLES[a].cy}
           x2={LEFT_PARTICLES[b].cx} y2={LEFT_PARTICLES[b].cy}
@@ -102,7 +102,7 @@ export function ImplanteIllustration() {
         fill="url(#ringGlow)" />
 
       {/* Anel externo */}
-      <motion.circle
+      <m.circle
         cx="290" cy="100" r="52"
         stroke="var(--rose)"
         strokeWidth="1"
@@ -110,12 +110,12 @@ export function ImplanteIllustration() {
         fill="none"
         initial={{ pathLength: 0, opacity: 0 }}
         whileInView={{ pathLength: 1, opacity: 0.2 }}
-        viewport={{ once: false }}
+        viewport={{ once: false, margin: "-100px" }}
         transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
       />
 
       {/* Anel médio — principal */}
-      <motion.circle
+      <m.circle
         cx="290" cy="100" r="38"
         stroke="var(--rose-cta)"
         strokeWidth="1.75"
@@ -123,12 +123,12 @@ export function ImplanteIllustration() {
         opacity="0.55"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
-        viewport={{ once: false }}
+        viewport={{ once: false, margin: "-100px" }}
         transition={{ duration: 1.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
       />
 
       {/* Anel interno */}
-      <motion.circle
+      <m.circle
         cx="290" cy="100" r="22"
         stroke="var(--rose)"
         strokeWidth="1"
@@ -136,32 +136,32 @@ export function ImplanteIllustration() {
         opacity="0.35"
         initial={{ pathLength: 0 }}
         whileInView={{ pathLength: 1 }}
-        viewport={{ once: false }}
+        viewport={{ once: false, margin: "-100px" }}
         transition={{ duration: 1.2, delay: 0.8, ease: [0.22, 1, 0.36, 1] }}
       />
 
       {/* Ponto central */}
-      <motion.circle
+      <m.circle
         cx="290" cy="100" r="5"
         fill="var(--rose-cta)"
         opacity="0.7"
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
-        viewport={{ once: false }}
+        viewport={{ once: false, margin: "-100px" }}
         transition={{ duration: 0.5, delay: 1.2, type: 'spring', stiffness: 300 }}
         style={{ transformOrigin: '290px 100px' }}
       />
 
       {/* Pontos no anel — partículas que "chegaram" */}
       {RING_POINTS.map((p, i) => (
-        <motion.circle
+        <m.circle
           key={i}
           cx={p.cx} cy={p.cy} r="2"
           fill="var(--rose)"
           opacity="0.45"
           initial={{ scale: 0, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 0.45 }}
-          viewport={{ once: false }}
+          viewport={{ once: false, margin: "-100px" }}
           transition={{
             duration: 0.3,
             delay: 0.5 + p.delay,
@@ -176,7 +176,7 @@ export function ImplanteIllustration() {
       {[0, 90, 180, 270].map((deg, i) => {
         const rad = (deg * Math.PI) / 180;
         return (
-          <motion.line
+          <m.line
             key={i}
             x1={290 + Math.cos(rad) * 58}
             y1={100 + Math.sin(rad) * 58}
@@ -188,14 +188,14 @@ export function ImplanteIllustration() {
             opacity="0.4"
             initial={{ opacity: 0, pathLength: 0 }}
             whileInView={{ opacity: 0.4, pathLength: 1 }}
-            viewport={{ once: false }}
+            viewport={{ once: false, margin: "-100px" }}
             transition={{ duration: 0.4, delay: 1.6 + i * 0.05 }}
           />
         );
       })}
 
       {/* Pulse no anel médio */}
-      <motion.circle
+      <m.circle
         cx="290" cy="100" r="38"
         stroke="var(--rose-cta)"
         strokeWidth="1"

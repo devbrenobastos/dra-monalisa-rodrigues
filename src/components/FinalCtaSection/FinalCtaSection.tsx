@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './FinalCtaSection.module.css';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 import { CreditCard, MapPin, Smartphone } from 'lucide-react';
 import { fadeUp } from '../../animations/variants';
@@ -14,50 +14,50 @@ export const FinalCtaSection: React.FC = () => {
 
       <div className={styles.container}>
         <div className={styles.content}>
-          <motion.div
+          <m.div
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-100px" }}
             custom={0}
           >
             <SectionLabel dark>Primeiro passo</SectionLabel>
-          </motion.div>
+          </m.div>
           
-          <motion.h2 
+          <m.h2 
             className={styles.title}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-100px" }}
             custom={1}
           >
             Se você chegou até aqui, já deu o <em>primeiro passo.</em>
-          </motion.h2>
+          </m.h2>
 
           <div className={styles.bodyText}>
-            <motion.p
+            <m.p
               variants={fadeUp}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: true, margin: "-100px" }}
               custom={2}
             >
               O Dr. Rafael e a Dra. Monalisa estão prontos para te atender.
               Sem enrolação, sem julgamento.
               Só uma conversa para entender o seu caso e traçar o melhor caminho.
-            </motion.p>
+            </m.p>
           </div>
 
-          <motion.div 
+          <m.div 
             className={styles.ctaWrapper}
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
+            viewport={{ once: true, margin: "-100px" }}
             custom={4}
           >
-            <motion.a 
+            <m.a 
               href="https://wa.me/5519984427733" 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -72,7 +72,7 @@ export const FinalCtaSection: React.FC = () => {
               }}
             >
               Falar com a recepção agora
-            </motion.a>
+            </m.a>
             
             <div className={styles.infoRow}>
               <div className={styles.microCopy}>
@@ -89,7 +89,7 @@ export const FinalCtaSection: React.FC = () => {
                 <Smartphone size={13} style={{ display: 'inline-block', verticalAlign: '-1.5px', marginRight: '4px', opacity: 0.8 }} /> (19) 98442-7733
               </a>
             </div>
-          </motion.div>
+          </m.div>
         </div>
       </div>
     </section>

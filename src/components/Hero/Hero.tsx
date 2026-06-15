@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './Hero.module.css';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 import { Lock, CreditCard } from 'lucide-react';
 import { fadeUp, scaleIn } from '../../animations/variants';
-import heroBoutique from '../../assets/hero-boutique.webp';
 
 export const Hero: React.FC = () => {
   return (
@@ -17,17 +16,17 @@ export const Hero: React.FC = () => {
       <div className={styles.container}>
         {/* Left column: Copy */}
         <div className={styles.copyCol}>
-          <motion.div
+          <m.div
             custom={0}
             variants={fadeUp}
             initial="hidden"
             animate="visible"
           >
             <SectionLabel>Implante e endodontia em Vinhedo</SectionLabel>
-          </motion.div>
+          </m.div>
 
           <h1 className={styles.headline}>
-            <motion.span
+            <m.span
               style={{ display: 'inline-block' }}
               custom={1}
               variants={fadeUp}
@@ -35,10 +34,10 @@ export const Hero: React.FC = () => {
               animate="visible"
             >
               Talvez você tenha adiado essa consulta por meses. Ou até por <em>anos.</em>
-            </motion.span>
+            </m.span>
           </h1>
 
-          <motion.p 
+          <m.p 
             className={styles.subheadline}
             custom={3}
             variants={fadeUp}
@@ -51,9 +50,9 @@ export const Hero: React.FC = () => {
             {" "}
             Dois especialistas. Um cuida do seu canal, outro do seu implante.
             Mais de 2.000 casos realizados e atendimento que respeita o seu tempo.
-          </motion.p>
+          </m.p>
 
-          <motion.div 
+          <m.div 
             className={styles.ctaWrapper}
             custom={4}
             variants={fadeUp}
@@ -75,12 +74,12 @@ export const Hero: React.FC = () => {
             <div className={styles.locationLabel}>
               Atendemos em Vinhedo e região de Campinas
             </div>
-          </motion.div>
+          </m.div>
         </div>
 
         {/* Right column: Image placeholder */}
         <div className={styles.imageCol}>
-          <motion.div 
+          <m.div 
             className={styles.imageContainer}
             variants={scaleIn}
             initial="hidden"
@@ -89,18 +88,19 @@ export const Hero: React.FC = () => {
             {/* Editorial placeholder representing doctors' office */}
             <div className={styles.photoPlaceholder} role="img" aria-label="Casal de Doutores no consultório boutique em Vinhedo">
               <img 
-                src={heroBoutique} 
+                src="/assets/hero-boutique.webp" 
                 alt="Casal de Doutores no consultório boutique em Vinhedo" 
                 className={styles.heroImage} 
                 width="900" 
                 height="1125" 
                 fetchPriority="high" 
+                loading="eager"
                 decoding="async" 
               />
             </div>
 
             {/* Floating badge */}
-            <motion.div 
+            <m.div 
               className={styles.floatingBadge}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -111,7 +111,7 @@ export const Hero: React.FC = () => {
                 delay: 0.7 
               }}
             >
-              <motion.div
+              <m.div
                 animate={{ 
                   y: [0, -6, 0],
                   x: [0, 4, 0] 
@@ -125,9 +125,9 @@ export const Hero: React.FC = () => {
               >
                 <span className={styles.stars}>★★★★★</span>
                 <span className={styles.badgeText}>"Mais de 2.000 atendimentos realizados"</span>
-              </motion.div>
-            </motion.div>
-          </motion.div>
+              </m.div>
+            </m.div>
+          </m.div>
         </div>
       </div>
     </header>

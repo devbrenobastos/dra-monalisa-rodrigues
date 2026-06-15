@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 import styles from './TestimonialsSection.module.css';
 
@@ -83,12 +83,12 @@ function TestimonialCard({
   index: number;
 }) {
   return (
-    <motion.div
+    <m.div
       className={styles.card}
       style={{ top: `${88 + index * 6}px`, zIndex: index + 1 }}
       initial={{ opacity: 0, y: 28 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-60px' }}
+      viewport={{ once: true, margin: '-100px' }}
       transition={{
         duration: 0.5,
         ease: [0.22, 1, 0.36, 1],
@@ -111,7 +111,7 @@ function TestimonialCard({
       <p className={styles.quote}>"{testimonial.quote}"</p>
 
       <p className={styles.doctorTag}>{testimonial.doctor}</p>
-    </motion.div>
+    </m.div>
   );
 }
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from './HowItWorksSection.module.css';
-import { motion } from 'framer-motion';
+import { m } from 'framer-motion';
 import { SectionLabel } from '../SectionLabel/SectionLabel';
 
 function AnimatedArrow() {
   return (
     <div className={styles.arrowWrapper}>
-      <motion.div
+      <m.div
         className={styles.arrowTrack}
         animate={{ x: [0, 7, 0] }}
         transition={{
@@ -49,7 +49,7 @@ function AnimatedArrow() {
             opacity="0.6"
           />
         </svg>
-      </motion.div>
+      </m.div>
     </div>
   );
 }
@@ -90,11 +90,11 @@ export const HowItWorksSection: React.FC = () => {
           {steps.map((step, i) => (
             <React.Fragment key={step.number}>
               {/* Card */}
-              <motion.div
+              <m.div
                 className={styles.card}
                 initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
+                viewport={{ once: true, margin: '-100px' }}
                 transition={{
                   duration: 0.55,
                   ease: [0.22, 1, 0.36, 1],
@@ -114,7 +114,7 @@ export const HowItWorksSection: React.FC = () => {
 
                 {/* Texto */}
                 <p className={styles.cardText}>{step.text}</p>
-              </motion.div>
+              </m.div>
 
               {/* Seta entre cards (não após o último) */}
               {i < steps.length - 1 && <AnimatedArrow key={`arrow-${i}`} />}

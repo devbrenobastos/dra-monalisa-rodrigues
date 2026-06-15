@@ -21,7 +21,7 @@ export const Footer: React.FC = () => {
         <div className={styles.navContactRow}>
           {/* Col 2: Navigation Links */}
           <div className={styles.col}>
-            <h4 className={styles.colTitle}>Navegação</h4>
+            <h3 className={styles.colTitle}>Navegação</h3>
             <ul className={styles.linksList}>
               <li><a href="#tratamentos">Tratamentos</a></li>
               <li><a href="#sobre-nos">Sobre nós</a></li>
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
 
           {/* Col 3: Contact & Location details */}
           <div className={styles.col}>
-            <h4 className={styles.colTitle}>Contato & Endereços</h4>
+            <h3 className={styles.colTitle}>Contato & Endereços</h3>
             <div className={styles.contactText}>
               <p style={{ display: 'flex', alignItems: 'center', gap: '6px', margin: '0 0 12px 0' }}>
                 <Phone size={14} style={{ opacity: 0.8 }} /> (19) 98442-7733

@@ -10,6 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/dm-sans": "^5.2.8",
+    "@fontsource/libre-baskerville": "^5.2.10",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.18.0",
     "react": "^18.3.1",

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './WhatsAppSticky.module.css';
-import { motion, AnimatePresence } from 'framer-motion';
+import { m, AnimatePresence } from 'framer-motion';
 
 export const WhatsAppSticky: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +29,7 @@ export const WhatsAppSticky: React.FC = () => {
   return (
     <AnimatePresence>
       {isVisible && (
-        <motion.a
+        <m.a
           href="https://wa.me/5519984427733"
           target="_blank"
           rel="noopener noreferrer"
@@ -60,7 +60,7 @@ export const WhatsAppSticky: React.FC = () => {
           </svg>
           
           <span className={styles.btnText}>Agendar consulta</span>
-        </motion.a>
+        </m.a>
       )}
     </AnimatePresence>
   );
