@@ -79,7 +79,7 @@ export const FaqSection: React.FC = () => {
     },
     {
       q: "Vocês atendem em Campinas?",
-      a: "Nosso consultório fica em Vinhedo, com fácil acesso à região de Campinas. Muitos pacientes vêm de cidades vizinhas e dizem que vale o deslocamento."
+      a: "Sim, atendemos tanto em nosso consultório em Vinhedo quanto no Cambuí, em Campinas. Você pode escolher a unidade que for mais conveniente para o seu atendimento."
     },
     {
       q: "Vocês atendem por plano odontológico?",

@@ -395,9 +395,21 @@
   gap: 24px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
+  .proceduresGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .proceduresColLarge {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
   .proceduresGrid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .proceduresColLarge {
+    grid-column: span 2;
   }
 }
 

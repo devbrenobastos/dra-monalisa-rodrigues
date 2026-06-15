@@ -43,7 +43,12 @@ export const Navbar: React.FC = () => {
       >
         <div className={styles.container}>
           <a href="#" className={styles.logo}>
-            Dra. Monalisa Rodrigues & Dr. Rafael R. M. Cidral
+            <span className={styles.desktopLogo}>Dra. Monalisa Rodrigues & Dr. Rafael R. M. Cidral</span>
+            <span className={styles.mobileLogo}>
+              Dra. Monalisa Rodrigues
+              <br />
+              & Dr. Rafael R. M. Cidral
+            </span>
           </a>
 
           <div className={styles.desktopLinks}>

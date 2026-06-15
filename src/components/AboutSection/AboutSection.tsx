@@ -43,11 +43,7 @@ export function AboutSection() {
               </li>
               <li>
                 <span className={styles.dot} />
-                Professor Assistente de Cirurgia e Implante — Instituto Mestris
-              </li>
-              <li>
-                <span className={styles.dot} />
-                Especialista em reabilitação oral e cirurgia implantodôntica
+                Especialista em reabilitação oral
               </li>
             </ul>
             <div className={styles.cardFocus}>

@@ -152,35 +152,51 @@ export const TreatmentsSection: React.FC = () => {
           <h3 className={styles.proceduresTitle}>Nossos Procedimentos</h3>
           
           <div className={styles.proceduresGrid}>
-            {/* Category 1: Implante e Prótese */}
-            <div className={styles.proceduresCol}>
-              <h4 className={styles.proceduresColTitle}>Implante e Prótese</h4>
+            {/* Category 1: Implante */}
+            <div className={`${styles.proceduresCol} ${styles.proceduresColLarge}`}>
+              <h4 className={styles.proceduresColTitle}>Implante</h4>
               <ul className={styles.proceduresList}>
                 <li>Implante simples/múltiplos</li>
                 <li>Protocolo</li>
                 <li>Manutenção de Protocolo</li>
-                <li>Facetas</li>
-                <li>Prótese sobre implante</li>
-                <li>Prótese sobre dente</li>
               </ul>
             </div>
 
-            {/* Category 2: Cirurgia */}
+            {/* Category 2: Prótese */}
+            <div className={styles.proceduresCol}>
+              <h4 className={styles.proceduresColTitle}>Prótese</h4>
+              <ul className={styles.proceduresList}>
+                <li>Facetas</li>
+                <li>sobre implante</li>
+                <li>sobre dente</li>
+              </ul>
+            </div>
+
+            {/* Category 3: Cirurgia */}
             <div className={styles.proceduresCol}>
               <h4 className={styles.proceduresColTitle}>Cirurgia</h4>
               <ul className={styles.proceduresList}>
-                <li>Cirurgia de 3º Molar</li>
-                <li>Cirurgia Geral</li>
+                <li>cirurgia de 3º Molar</li>
+                <li>Cirurgia geral</li>
               </ul>
             </div>
 
-            {/* Category 3: Periodontia */}
+            {/* Category 4: Periodontia */}
             <div className={styles.proceduresCol}>
               <h4 className={styles.proceduresColTitle}>Periodontia</h4>
               <ul className={styles.proceduresList}>
-                <li>Cirurgia plástica periodontal</li>
-                <li>Raspagem/Limpeza</li>
+                <li>cirurgia plástica periodontal</li>
+                <li>raspagem/ limpeza</li>
                 <li>Restaurações</li>
+              </ul>
+            </div>
+
+            {/* Category 5: Endodontia */}
+            <div className={styles.proceduresCol}>
+              <h4 className={styles.proceduresColTitle}>Endodontia</h4>
+              <ul className={styles.proceduresList}>
+                <li>Tratamento de canal (mecanizado)</li>
+                <li>Retratamento de canal (mecanizado)</li>
               </ul>
             </div>
           </div>
