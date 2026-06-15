@@ -75,15 +75,15 @@ export const FaqSection: React.FC = () => {
     },
     {
       q: "Tenho muito medo. Vocês conseguem lidar com isso?",
-      a: "É a pergunta que mais recebemos e a resposta é sim. Nosso atendimento é no seu ritmo. Você tem controle, decide quando parar, e nunca é julgado."
+      a: "Nosso atendimento é humanizado, explicamos tudo do início ao fim sempre priorizando o seu bem estar e conforto."
     },
     {
       q: "Vocês atendem em Campinas?",
-      a: "Sim, atendemos tanto em nosso consultório em Vinhedo quanto no Cambuí, em Campinas. Você pode escolher a unidade que for mais conveniente para o seu atendimento."
+      a: "Sim, atendemos tanto em Vinhedo quanto em Campinas. Você pode escolher a unidade que for mais conveniente para o seu atendimento."
     },
     {
       q: "Vocês atendem por plano odontológico?",
-      a: "Atendemos exclusivamente pelo plano Uniodonto."
+      a: "Atendemos exclusivamente pelo plano Uniodonto. Para demais convênios, fornecemos toda a documentação necessária para você solicitar a cobertura do tratamento ou reembolso."
     }
   ];
 

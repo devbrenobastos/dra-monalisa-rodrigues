@@ -97,7 +97,7 @@ export const ProblemSection: React.FC = () => {
 
         <p className={styles.storyParagraph}>
           Se você se identificou com pelo menos um desses medos,
-          saiba que não está sozinho, e que existe uma saída.
+          saiba que não está sozinho e que existe uma saída.
         </p>
 
         <blockquote className={styles.blockquote}>

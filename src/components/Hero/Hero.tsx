@@ -48,8 +48,8 @@ export const Hero: React.FC = () => {
               Tudo bem. O importante é que você chegou até aqui.
             </strong>
             {" "}
-            Dois especialistas. Um cuida do seu canal, outro do seu implante.
-            Mais de 2.000 casos realizados e atendimento que respeita o seu tempo.
+            Dois especialistas prontos para cuidar do seu canal, implante, estética, gengiva e saúde bucal completa.
+            Mais de 2.000 casos realizados e atendimento humanizado.
           </m.p>
 
           <m.div 

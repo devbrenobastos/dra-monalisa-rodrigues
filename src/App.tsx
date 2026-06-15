@@ -11,6 +11,7 @@ import { HowItWorksSection } from './components/HowItWorksSection/HowItWorksSect
 import { WhatsAppSticky } from './components/WhatsAppSticky/WhatsAppSticky';
 
 const TestimonialsSection = lazy(() => import('./components/BelowFold').then(m => ({ default: m.TestimonialsSection })));
+const VideoTestimonialsSection = lazy(() => import('./components/BelowFold').then(m => ({ default: m.VideoTestimonialsSection })));
 const FaqSection = lazy(() => import('./components/BelowFold').then(m => ({ default: m.FaqSection })));
 const FinalCtaSection = lazy(() => import('./components/BelowFold').then(m => ({ default: m.FinalCtaSection })));
 const Footer = lazy(() => import('./components/BelowFold').then(m => ({ default: m.Footer })));
@@ -27,6 +28,9 @@ const App: React.FC = () => {
         <ProblemSection />
         <TreatmentsSection />
         <HowItWorksSection />
+        <Suspense fallback={<div style={{ minHeight: '500px' }} />}>
+          <VideoTestimonialsSection />
+        </Suspense>
         <Suspense fallback={<div style={{ minHeight: '600px' }} />}>
           <TestimonialsSection />
         </Suspense>

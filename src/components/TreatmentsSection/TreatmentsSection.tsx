@@ -19,7 +19,7 @@ export const TreatmentsSection: React.FC = () => {
         <div className={styles.header}>
           <SectionLabel>O que fazemos</SectionLabel>
           <h2 className={styles.title}>
-            O que fazemos, e o que isso <em>muda</em> na sua vida.
+            O que fazemos e o que isso <em>muda</em> na sua vida.
           </h2>
         </div>
 
@@ -53,15 +53,13 @@ export const TreatmentsSection: React.FC = () => {
               <span className={styles.cardEyebrow}>DR. RAFAEL CIDRAL · IMPLANTE</span>
               <h3 className={styles.cardTitle}>Volte a comer, sorrir e conversar com <em>confiança.</em></h3>
               <p className={styles.cardDescription}>
-                Implante não é cirurgia de risco. É um procedimento
-                preciso, planejado passo a passo, com anestesia eficaz e resultado
-                que dura décadas.
+                O tratamento de implante é uma cirurgia que terá seu sucesso desde que estudada, planejada, realizada com conhecimento e manutenção. Assim pode durar décadas.
               </p>
               
               <ul className={styles.outcomesList}>
                 <li>
                   <Check className={styles.checkIcon} size={18} />
-                  <span>Coma carne, castanha e frutas sem medo</span>
+                  <span>Volte a se alimentar sem medo</span>
                 </li>
                 <li>
                   <Check className={styles.checkIcon} size={18} />
@@ -167,8 +165,8 @@ export const TreatmentsSection: React.FC = () => {
               <h4 className={styles.proceduresColTitle}>Prótese</h4>
               <ul className={styles.proceduresList}>
                 <li>Facetas</li>
-                <li>sobre implante</li>
-                <li>sobre dente</li>
+                <li>Sobre implante</li>
+                <li>Sobre dente</li>
               </ul>
             </div>
 
@@ -176,7 +174,7 @@ export const TreatmentsSection: React.FC = () => {
             <div className={styles.proceduresCol}>
               <h4 className={styles.proceduresColTitle}>Cirurgia</h4>
               <ul className={styles.proceduresList}>
-                <li>cirurgia de 3º Molar</li>
+                <li>Cirurgia de 3º Molar</li>
                 <li>Cirurgia geral</li>
               </ul>
             </div>
@@ -185,8 +183,8 @@ export const TreatmentsSection: React.FC = () => {
             <div className={styles.proceduresCol}>
               <h4 className={styles.proceduresColTitle}>Periodontia</h4>
               <ul className={styles.proceduresList}>
-                <li>cirurgia plástica periodontal</li>
-                <li>raspagem/ limpeza</li>
+                <li>Cirurgia plástica periodontal</li>
+                <li>Raspagem/ limpeza</li>
                 <li>Restaurações</li>
               </ul>
             </div>

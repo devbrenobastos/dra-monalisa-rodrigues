@@ -59,7 +59,7 @@ export const HowItWorksSection: React.FC = () => {
     {
       number: '01',
       title: 'Agende sua avaliação',
-      text: 'Você conta o que está sentindo. A gente escuta, examina e explica tudo, sem julgamento e sem pressa.',
+      text: 'Você conta o que está sentindo, fazemos anamnese, avaliação clínica, análise de exames complementares e explicamos tudo na avaliação.',
     },
     {
       number: '02',
