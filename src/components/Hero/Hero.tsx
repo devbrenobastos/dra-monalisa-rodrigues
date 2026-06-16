@@ -88,7 +88,7 @@ export const Hero: React.FC = () => {
             {/* Editorial placeholder representing doctors' office */}
             <div className={styles.photoPlaceholder} role="img" aria-label="Casal de Doutores no consultório boutique em Vinhedo">
               <img 
-                src="/assets/hero-boutique.webp" 
+                src="/assets/nova_hero.webp" 
                 alt="Casal de Doutores no consultório boutique em Vinhedo" 
                 className={styles.heroImage} 
                 width="900" 
